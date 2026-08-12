@@ -1,8 +1,20 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { HeadContent } from '@tanstack/react-router';
+
 import { motion } from 'framer-motion';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight } from 'lucide-react';
 
 export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      { title: "Monteiro Ramalho Advogados Associados | Direito Previdenciário e Trabalhista" },
+      { name: "description", content: "Especialistas em INSS, aposentadorias, benefícios e causas trabalhistas. Atendimento online em todo o Brasil. Fale com um advogado agora." },
+      { property: "og:title", content: "Monteiro Ramalho Advogados Associados" },
+      { property: "og:description", content: "Justiça Previdenciária e Trabalhista com excelência e estratégia." },
+      { property: "og:image", content: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
