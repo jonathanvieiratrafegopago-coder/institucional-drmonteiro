@@ -241,30 +241,76 @@ function Index() {
         </div>
       </section>
 
-      {/* Sobre o Escritório Section */}
-      <section id="sobre" className="py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="absolute -inset-4 border-2 border-primary/20 rounded-2xl z-0 translate-x-4 translate-y-4" />
-              <img 
-                src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80" 
-                alt="Nossa Equipe" 
-                className="rounded-2xl relative z-10 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
-              <div className="absolute bottom-8 right-8 bg-primary p-6 rounded-xl z-20 shadow-2xl">
-                <p className="text-primary-foreground font-serif text-3xl font-bold leading-none">15+</p>
-                <p className="text-primary-foreground text-[10px] font-bold uppercase tracking-widest mt-1">Anos de Experiência</p>
-              </div>
+      {/* Quem Somos Section */}
+      <section id="sobre" className="relative py-32 overflow-hidden">
+        {/* Background with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-background/95 z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80" 
+            alt="Justiça" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-20">
+          <div className="grid md:grid-cols-12 gap-12 items-start">
+            <div className="md:col-span-5">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-block px-6 py-2 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest mb-8"
+              >
+                Quem Somos
+              </motion.div>
+              <motion.h3 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-4xl md:text-6xl font-serif text-white leading-tight"
+              >
+                Hub jurídico estratégico para <span className="text-primary italic">empresas e legados</span>.
+              </motion.h3>
             </div>
 
-            <div>
-              <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Sobre Nós</span>
-              <h3 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">Hub jurídico estratégico para empresas e legados</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Fundada em 2015, o <span className="text-white font-bold">Monteiro Ramalho Advogados Associados</span> nasceu com um propósito claro: oferecer uma advocacia moderna, próxima e orientada por resultados, disponibilidade e falando a linguagem do cliente. Acreditamos que o papel do advogado não é apenas resolver conflitos, mas contribuir para que eles sejam evitados.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-10">
+            <div className="md:col-span-7 space-y-8 pt-4">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-lg text-muted-foreground leading-relaxed"
+              >
+                Fundada em 2015, o <span className="text-white font-bold">Monteiro Ramalho Advogados Associados</span> nasceu com um propósito claro: oferecer uma advocacia moderna, próxima e orientada por resultados, disponibilidade e falando a linguagem do cliente.
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-lg text-muted-foreground leading-relaxed"
+              >
+                Ao longo da nossa trajetória, consolidamos uma atuação consultiva que integra diferentes áreas do Direito para apoiar decisões empresariais, patrimoniais e condominiais com segurança jurídica e visão estratégica.
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-lg text-muted-foreground leading-relaxed italic"
+              >
+                "Acreditamos que o papel do advogado não é apenas resolver conflitos, mas contribuir para que eles sejam evitados."
+              </motion.p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10"
+              >
                 {[
                   'Williams Ramalho',
                   'Monteiro Neto',
@@ -276,10 +322,7 @@ function Index() {
                     <span className="text-white text-sm font-bold tracking-tight">{name}</span>
                   </div>
                 ))}
-              </div>
-              <a href={WHATSAPP_LINK} className="text-primary font-bold uppercase tracking-[0.2em] flex items-center gap-3 hover:gap-5 transition-all">
-                Agende uma conversa estratégica <ArrowRight className="w-5 h-5" />
-              </a>
+              </motion.div>
             </div>
           </div>
         </div>
