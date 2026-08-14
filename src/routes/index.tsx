@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { HeadContent } from '@tanstack/react-router';
-import heroPartnersAsset from '@/assets/hero-partners.png.asset.json';
+import heroOfficialAsset from '@/assets/hero-official.png.asset.json';
 import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
 import direitoTributarioAsset from '@/assets/direito-tributario.png.asset.json';
 import direitoImobiliarioAsset from '@/assets/direito-imobiliario.png.asset.json';
@@ -20,16 +20,17 @@ import logoMraAsset from '@/assets/logo-mra.png.asset.json';
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
-      { title: "Monteiro Ramalho Advogados Associados | Direito Previdenciário e Trabalhista" },
-      { name: "description", content: "Especialistas em INSS, aposentadorias, benefícios e causas trabalhistas. Atendimento online em todo o Brasil. Fale com um advogado agora." },
+      { title: "Monteiro Ramalho Advogados Associados | Hub Jurídico Estratégico" },
+      { name: "description", content: "Assessoria jurídica estratégica para empresas e legados. Especialistas em Direito Tributário, Imobiliário, Condominial e Planejamento Patrimonial." },
       { property: "og:title", content: "Monteiro Ramalho Advogados Associados" },
-      { property: "og:description", content: "Justiça Previdenciária e Trabalhista com excelência e estratégia." },
-      { property: "og:image", content: heroPartnersAsset.url },
+      { property: "og:description", content: "Transformamos o jurídico em um ativo estratégico." },
+      { property: "og:image", content: heroOfficialAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
 });
+
 
 function Index() {
   const WHATSAPP_LINK = "https://wa.me/5585994443223?text=Olá! Gostaria de uma consultoria jurídica estratégica.";
@@ -45,7 +46,7 @@ function Index() {
 
 
           
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
+          <div className="hidden md:flex items-center gap-8 text-[10px] font-bold tracking-[0.2em] uppercase">
             <a href="#inicio" className="hover:text-primary transition-colors">Início</a>
             <a href="#atuacao" className="hover:text-primary transition-colors">Atuação</a>
             <a href="#sobre" className="hover:text-primary transition-colors">O Escritório</a>
@@ -56,78 +57,41 @@ function Index() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-primary px-6 py-2.5 rounded-full text-primary-foreground font-bold text-sm uppercase tracking-wider hover:scale-105 transition-all shadow-lg shadow-primary/20"
+            className="flex items-center gap-2 bg-primary px-6 py-2.5 rounded-full text-primary-foreground font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-primary/20"
           >
             <Phone className="w-4 h-4" /> WhatsApp
           </a>
+
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Background Overlay */}
+      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Imagem Hero Oficial */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent z-10" />
           <img 
-            src={heroPartnersAsset.url} 
+            src={heroOfficialAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-cover opacity-30 grayscale contrast-125 mix-blend-luminosity"
+            className="w-full h-full object-cover"
           />
+          {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
+          <div className="absolute inset-0 bg-black/5" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest mb-6"
-            >
-              <Award className="w-3 h-3" /> Hub jurídico estratégico para empresas e legados
-            </motion.div>
+        {/* Overlay clicável para WhatsApp em toda a área conforme o layout limpo solicitado */}
+        <a 
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 z-10 cursor-pointer"
+          aria-label="Falar com um especialista"
+        />
 
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl font-serif text-white mb-8 leading-[1.1] tracking-tight"
-            >
-              Transformamos o jurídico em um <span className="text-primary italic font-serif">ativo estratégico</span>.
-            </motion.h2>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl leading-relaxed"
-            >
-              Empresas crescem. Patrimônios se transformam. Mas crescer sem estratégia jurídica significa assumir riscos que poderiam ser evitados. Nossa atuação começa antes do problema surgir.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 items-start"
-            >
-              <a 
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-lg text-lg font-bold hover:bg-primary/90 transition-all hover:scale-[1.02] shadow-2xl shadow-primary/30"
-              >
-                Falar com um especialista agora
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              
-              <div className="flex flex-col justify-center py-2 px-4 border-l border-white/10 ml-0 sm:ml-4">
-                <span className="text-white font-bold text-sm">Visão de Negócio</span>
-                <span className="text-primary text-xs uppercase tracking-widest font-bold">Estratégica e Consultiva</span>
-              </div>
-            </motion.div>
-
-            {/* Removed redundant quick proofs from hero */}
-          </div>
+        <div className="container mx-auto px-4 relative z-20 pointer-events-none">
+          {/* Área reservada para a imagem oficial brilhar sem obstruções de texto do template */}
         </div>
       </section>
+
 
       {/* Nosso Impacto Section */}
       <section className="py-24 bg-background relative overflow-hidden">
