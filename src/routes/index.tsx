@@ -310,32 +310,67 @@ function Index() {
         </div>
       </section>
 
-      {/* Processo Section */}
-      <section id="processo" className="py-24 bg-background relative overflow-hidden">
+      {/* Diferencial Estratégico Section */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden border-y border-slate-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Como Atuamos</span>
-            <h3 className="text-4xl md:text-5xl font-serif text-white">Como conduzimos sua estratégia jurídica</h3>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-serif text-[#101947] leading-tight mb-4"
+            >
+              Não entregamos apenas advocacia.
+            </motion.h3>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-            {[
-              { step: '01', title: 'Diagnóstico', icon: '🔍' },
-              { step: '02', title: 'Análise Jurídica', icon: '⚖️' },
-              { step: '03', title: 'Estratégia', icon: '🎯' },
-              { step: '04', title: 'Implementação', icon: '⚙️' },
-              { step: '05', title: 'Acompanhamento', icon: '📊' },
-              { step: '06', title: 'Resultados', icon: '🏆' }
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center p-6 border border-white/5 rounded-xl bg-card text-center group hover:border-primary/30 transition-all">
-                <span className="text-primary/40 group-hover:text-primary font-bold text-xs mb-4">{item.step}</span>
-                <span className="text-3xl mb-4">{item.icon}</span>
-                <h5 className="text-white text-xs font-bold uppercase tracking-widest leading-tight">{item.title}</h5>
-              </div>
-            ))}
+          {/* Timeline-style grid */}
+          <div className="relative max-w-6xl mx-auto mb-16">
+            {/* Desktop Horizontal Line */}
+            <div className="absolute top-1/2 left-0 w-full h-px bg-slate-200 -translate-y-1/2 hidden md:block" />
+            
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 relative z-10">
+              {[
+                { step: '01', title: 'ENTREGAMOS ESTRATÉGIA PARA DECISÕES' },
+                { step: '02', title: 'SEGURANÇA PARA CRESCER' },
+                { step: '03', title: 'ORGANIZAÇÃO PATRIMONIAL' },
+                { step: '04', title: 'PROTEÇÃO EMPRESARIAL' },
+                { step: '05', title: 'RECUPERAÇÃO FINANCEIRA QUANDO APLICÁVEL' },
+                { step: '06', title: 'RELACIONAMENTOS DURADOUROS' }
+              ].map((item, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex flex-col items-center text-center group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#101947] text-white flex items-center justify-center font-bold text-sm mb-6 shadow-lg shadow-[#101947]/20 group-hover:scale-110 transition-transform">
+                    {item.step}
+                  </div>
+                  <h5 className="text-[10px] font-bold text-[#101947] uppercase tracking-wider leading-tight px-2 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h5>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="text-xl md:text-2xl font-serif text-[#101947] leading-relaxed"
+            >
+              Porque acreditamos que o jurídico deve contribuir para o crescimento do negócio, e não apenas atuar quando o problema já aconteceu.
+            </motion.p>
           </div>
         </div>
       </section>
+
 
       {/* Depoimentos Section */}
       <section id="depoimentos" className="py-24 bg-white border-y border-slate-100">
