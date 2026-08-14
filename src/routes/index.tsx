@@ -111,7 +111,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16"
+              className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16 !font-light"
             >
               Uma trajetória construída com <br className="hidden md:block" />
               <span className="text-white italic">consistência e resultados</span>.
@@ -148,7 +148,7 @@ function Index() {
       <section id="atuacao" className="py-24 bg-card relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Soluções jurídicas para diferentes desafios</h3>
+            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight !font-light">Soluções jurídicas para diferentes desafios</h3>
             <p className="text-muted-foreground">Combinamos visão jurídica, inteligência de negócios e planejamento para gerar previsibilidade e eficiência para empresas e legados.</p>
           </div>
 
