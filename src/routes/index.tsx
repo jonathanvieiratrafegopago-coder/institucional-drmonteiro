@@ -13,7 +13,9 @@ import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, A
 
 import clientesGrid1Asset from '@/assets/clientes-grid-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-2.png.asset.json';
-import equipeGridAsset from '@/assets/equipe-grid.png.asset.json';
+ import equipeGridAsset from '@/assets/equipe-grid.png.asset.json';
+import logoMraAsset from '@/assets/logo-mra.png.asset.json';
+
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -36,11 +38,11 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-white uppercase">Monteiro Ramalho</span>
-            <span className="text-[10px] md:text-xs tracking-[0.3em] text-primary uppercase -mt-1 font-bold">Advogados Associados</span>
+        <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+          <div className="flex items-center">
+            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 md:h-16 w-auto" />
           </div>
+
           
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
             <a href="#inicio" className="hover:text-primary transition-colors">Início</a>
@@ -659,10 +661,10 @@ function Index() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-2">
-              <div className="flex flex-col mb-6">
-                <span className="text-2xl font-serif font-bold tracking-tight text-white uppercase">Monteiro Ramalho</span>
-                <span className="text-[10px] tracking-[0.3em] text-primary uppercase -mt-1 font-bold">Advogados Associados</span>
+              <div className="mb-6">
+                <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4" />
               </div>
+
               <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
                 Hub jurídico estratégico para empresas e legados. Oferecemos advocacia moderna, próxima e orientada por resultados.
               </p>
