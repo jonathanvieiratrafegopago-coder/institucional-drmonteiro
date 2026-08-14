@@ -158,7 +158,7 @@ function Index() {
                 title: 'Direito Empresarial', 
                 desc: 'Constituição societária, governança, acordos entre sócios e contratos estratégicos.', 
                 icon: Scale,
-                image: null,
+                image: direitoEmpresarialAsset.url,
                 bullets: ['Sociedades', 'Contratos', 'Governança', 'Startups'],
                 highlight: 'Muito além da burocracia, buscamos ser parceiros estratégicos do seu crescimento empresarial.'
               },
