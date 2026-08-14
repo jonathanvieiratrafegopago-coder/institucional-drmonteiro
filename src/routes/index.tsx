@@ -7,7 +7,7 @@ import direitoTributarioAsset from '@/assets/direito-tributario-new.png.asset.js
 import direitoImobiliarioAsset from '@/assets/direito-imobiliario-new.png.asset.json';
 import direitoCondominialAsset from '@/assets/direito-condominial-new.png.asset.json';
 import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista-new-2.png.asset.json';
-import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial.png.asset.json';
+import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial-new.png.asset.json';
 
 import { motion } from 'framer-motion';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
