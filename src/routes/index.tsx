@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { HeadContent } from '@tanstack/react-router';
 import heroOfficialAsset from '@/assets/hero-official-new.png.asset.json';
 import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
+import direitoEmpresarialAsset from '@/assets/direito-empresarial.png.asset.json';
 import direitoTributarioAsset from '@/assets/direito-tributario.png.asset.json';
 import direitoImobiliarioAsset from '@/assets/direito-imobiliario.png.asset.json';
 import direitoCondominialAsset from '@/assets/direito-condominial.png.asset.json';
