@@ -1,9 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { HeadContent } from '@tanstack/react-router';
 import heroPartnersAsset from '@/assets/hero-partners.png.asset.json';
+import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
 
 import { motion } from 'framer-motion';
-import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight } from 'lucide-react';
+import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon } from 'lucide-react';
 
 export const Route = createFileRoute('/')({
   head: () => ({
