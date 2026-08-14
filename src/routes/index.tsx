@@ -346,7 +346,7 @@ function Index() {
                 <li className="flex items-center gap-2">contato@monteiroramalho.adv.br</li>
                 <li className="flex items-center gap-2">+55 (85) 99444-3223</li>
                 <li className="flex items-center gap-2 text-[10px] uppercase font-bold text-primary">R. Albert Sabin, 65 - Fortaleza - CE</li>
-                <li className="flex items-center gap-2 font-bold text-primary">Atendimento Online Brasil</li>
+                
               </ul>
             </div>
           </div>
@@ -367,7 +367,7 @@ function Index() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group animate-bounce"
+        className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group"
       >
         <Phone className="w-8 h-8 fill-current" />
         <span className="absolute right-full mr-4 bg-background/90 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10 backdrop-blur-sm">
