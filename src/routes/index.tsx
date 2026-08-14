@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { HeadContent } from '@tanstack/react-router';
-import heroPartnersAsset from '@/assets/hero-partners.png.asset.json';
+import heroOfficialAsset from '@/assets/hero-official.png.asset.json';
 import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
 import direitoTributarioAsset from '@/assets/direito-tributario.png.asset.json';
 import direitoImobiliarioAsset from '@/assets/direito-imobiliario.png.asset.json';
