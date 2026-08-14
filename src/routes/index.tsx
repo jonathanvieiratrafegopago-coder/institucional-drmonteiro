@@ -1,9 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { HeadContent } from '@tanstack/react-router';
 import heroPartnersAsset from '@/assets/hero-partners.png.asset.json';
+import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
 
 import { motion } from 'framer-motion';
-import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight } from 'lucide-react';
+import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon } from 'lucide-react';
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -245,11 +246,11 @@ function Index() {
       <section id="sobre" className="relative py-32 overflow-hidden">
         {/* Background with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-background/95 z-10" />
+          <div className="absolute inset-0 bg-background/90 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80" 
-            alt="Justiça" 
-            className="w-full h-full object-cover opacity-20"
+            src={quemSomosBgAsset.url} 
+            alt="Escritório Monteiro Ramalho" 
+            className="w-full h-full object-cover opacity-30 grayscale"
           />
         </div>
 
