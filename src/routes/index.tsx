@@ -73,7 +73,7 @@ function Index() {
           <img 
             src={heroOfficialAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-contain object-center"
+            className="w-full h-full object-contain object-top p-4 md:p-8"
           />
           {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
           <div className="absolute inset-0 bg-black/5" />
