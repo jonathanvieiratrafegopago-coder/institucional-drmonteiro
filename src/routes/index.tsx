@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { HeadContent } from '@tanstack/react-router';
+import heroPartnersAsset from '@/assets/hero-partners.png.asset.json';
 
 import { motion } from 'framer-motion';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight } from 'lucide-react';
@@ -11,7 +12,7 @@ export const Route = createFileRoute('/')({
       { name: "description", content: "Especialistas em INSS, aposentadorias, benefícios e causas trabalhistas. Atendimento online em todo o Brasil. Fale com um advogado agora." },
       { property: "og:title", content: "Monteiro Ramalho Advogados Associados" },
       { property: "og:description", content: "Justiça Previdenciária e Trabalhista com excelência e estratégia." },
-      { property: "og:image", content: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80" },
+      { property: "og:image", content: heroPartnersAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
@@ -55,9 +56,9 @@ function Index() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80" 
-            alt="Escritório de Advocacia" 
-            className="w-full h-full object-cover opacity-30"
+            src={heroPartnersAsset.url} 
+            alt="Sócios Monteiro Ramalho" 
+            className="w-full h-full object-cover opacity-40"
           />
         </div>
 
