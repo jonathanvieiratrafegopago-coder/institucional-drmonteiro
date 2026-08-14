@@ -27,8 +27,8 @@ function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-primary uppercase">Monteiro Ramalho</span>
-            <span className="text-[10px] md:text-xs tracking-[0.2em] text-muted-foreground uppercase -mt-1">Advogados Associados</span>
+            <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-white uppercase">Monteiro Ramalho</span>
+            <span className="text-[10px] md:text-xs tracking-[0.3em] text-primary uppercase -mt-1 font-bold">Advogados Associados</span>
           </div>
           
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
@@ -76,7 +76,7 @@ function Index() {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-7xl font-serif text-white mb-8 leading-[1.1] tracking-tight"
             >
-              Está enfrentando problemas com seu <span className="text-primary italic">benefício do INSS</span> ou <span className="text-primary italic">direitos trabalhistas</span>?
+              Está enfrentando problemas com seu <span className="text-primary italic font-serif">benefício do INSS</span> ou <span className="text-primary italic font-serif">direitos trabalhistas</span>?
             </motion.h2>
 
             <motion.p 
@@ -106,7 +106,7 @@ function Index() {
               
               <div className="flex flex-col justify-center py-2 px-4 border-l border-white/10 ml-0 sm:ml-4">
                 <span className="text-white font-bold text-sm">Análise Inicial</span>
-                <span className="text-primary text-xs uppercase tracking-widest font-bold italic">Estratégica e Gratuita</span>
+                <span className="text-primary text-xs uppercase tracking-widest font-bold">Estratégica e Gratuita</span>
               </div>
             </motion.div>
 
