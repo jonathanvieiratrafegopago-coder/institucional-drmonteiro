@@ -19,7 +19,7 @@ export const Route = createFileRoute('/')({
 });
 
 function Index() {
-  const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Olá! Gostaria de uma análise estratégica do meu caso.";
+  const WHATSAPP_LINK = "https://wa.me/5585994443223?text=Olá! Gostaria de uma consultoria jurídica estratégica.";
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
@@ -68,7 +68,7 @@ function Index() {
               animate={{ opacity: 1, x: 0 }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest mb-6"
             >
-              <Award className="w-3 h-3" /> Especialistas em Previdenciário e Trabalhista
+              <Award className="w-3 h-3" /> Hub jurídico estratégico para empresas e legados
             </motion.div>
 
             <motion.h2 
@@ -76,7 +76,7 @@ function Index() {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-7xl font-serif text-white mb-8 leading-[1.1] tracking-tight"
             >
-              Está enfrentando problemas com seu <span className="text-primary italic font-serif">benefício do INSS</span> ou <span className="text-primary italic font-serif">direitos trabalhistas</span>?
+              Transformamos o jurídico em um <span className="text-primary italic font-serif">ativo estratégico</span>.
             </motion.h2>
 
             <motion.p 
@@ -85,7 +85,7 @@ function Index() {
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl leading-relaxed"
             >
-              Atendimento especializado para aposentadorias, benefícios negados, revisões e causas trabalhistas. Fale com advogados experientes agora e garanta seus direitos.
+              Empresas crescem. Patrimônios se transformam. Mas crescer sem estratégia jurídica significa assumir riscos que poderiam ser evitados. Nossa atuação começa antes do problema surgir.
             </motion.p>
 
             <motion.div
@@ -100,13 +100,13 @@ function Index() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-lg text-lg font-bold hover:bg-primary/90 transition-all hover:scale-[1.02] shadow-2xl shadow-primary/30"
               >
-                Falar com um advogado no WhatsApp
+                Falar com um especialista agora
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               
               <div className="flex flex-col justify-center py-2 px-4 border-l border-white/10 ml-0 sm:ml-4">
-                <span className="text-white font-bold text-sm">Análise Inicial</span>
-                <span className="text-primary text-xs uppercase tracking-widest font-bold">Estratégica e Gratuita</span>
+                <span className="text-white font-bold text-sm">Visão de Negócio</span>
+                <span className="text-primary text-xs uppercase tracking-widest font-bold">Estratégica e Consultiva</span>
               </div>
             </motion.div>
 
@@ -115,16 +115,23 @@ function Index() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mt-16 flex flex-wrap gap-8 opacity-60"
+              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12"
             >
-              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest">
-                <CheckCircle className="w-4 h-4 text-primary" /> Atendimento em todo o Brasil
+              <div>
+                <p className="text-3xl font-serif text-primary font-bold">+10</p>
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Anos de atuação</p>
               </div>
-              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest">
-                <CheckCircle className="w-4 h-4 text-primary" /> Especialistas Online
+              <div>
+                <p className="text-3xl font-serif text-primary font-bold">100</p>
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Empresas assessoradas</p>
               </div>
-              <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest">
-                <CheckCircle className="w-4 h-4 text-primary" /> Suporte 24h via WhatsApp
+              <div>
+                <p className="text-3xl font-serif text-primary font-bold">+150M</p>
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Recuperados em créditos</p>
+              </div>
+              <div>
+                <p className="text-3xl font-serif text-primary font-bold">5000</p>
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Ações patrocinadas</p>
               </div>
             </motion.div>
           </div>
@@ -135,21 +142,18 @@ function Index() {
       <section id="atuacao" className="py-24 bg-card relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Como podemos ajudar você hoje?</h3>
-            <p className="text-muted-foreground">Cada caso é único. Nossa equipe analisa sua situação e orienta o melhor caminho jurídico com autoridade e clareza.</p>
+            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Soluções jurídicas para diferentes desafios</h3>
+            <p className="text-muted-foreground">Combinamos visão jurídica, inteligência de negócios e planejamento para gerar previsibilidade e eficiência para empresas e legados.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Benefício negado pelo INSS', desc: 'Auxiliamos na reversão de negativas indevidas.' },
-              { title: 'Auxílio-doença / Acidente', desc: 'Garanta seu sustento durante a incapacidade.' },
-              { title: 'Aposentadoria Especial', desc: 'Planejamento e execução de tempo de serviço.' },
-              { title: 'Revisão de Benefício', desc: 'Verificamos se o valor do seu benefício está correto.' },
-              { title: 'BPC / LOAS', desc: 'Assistência para idosos e pessoas com deficiência.' },
-              { title: 'Rescisão Trabalhista', desc: 'Cálculos precisos de verbas rescisórias.' },
-              { title: 'Horas Extras', desc: 'Recuperação de valores não pagos pela empresa.' },
-              { title: 'Demissão Injusta', desc: 'Defesa em casos de demissão sem justa causa.' },
-              { title: 'Assédio no Trabalho', desc: 'Reparação por danos morais e assédio.' }
+              { title: 'Direito Empresarial', desc: 'Constituição societária, governança, acordos entre sócios e contratos estratégicos.', icon: Scale },
+              { title: 'Direito Tributário', desc: 'Planejamento, recuperação de créditos e defesas administrativas focadas em ganho financeiro.', icon: Shield },
+              { title: 'Direito Imobiliário', desc: 'Regularizações, due diligence e segurança jurídica em cada operação patrimonial.', icon: CheckCircle },
+              { title: 'Direito Condominial', desc: 'Gestão jurídica segura para condomínios, implantação, convenções e mediação.', icon: Users },
+              { title: 'Compliance Trabalhista', desc: 'Estruturação de processos internos para redução de riscos e prevenção de passivos.', icon: Gavel },
+              { title: 'Planejamento Patrimonial', desc: 'Holding, sucessão e governança para preservar legados e proteger gerações.', icon: Award }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -157,12 +161,12 @@ function Index() {
                 className="p-8 border border-white/5 rounded-2xl bg-background hover:border-primary/50 transition-all group"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                  <Shield className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
+                  <item.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
                 </div>
                 <h4 className="font-bold text-xl text-white mb-3 tracking-tight">{item.title}</h4>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">{item.desc}</p>
                 <a href={WHATSAPP_LINK} className="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:translate-x-1 transition-transform">
-                  Solicitar análise <ChevronRight className="w-4 h-4" />
+                  Entender mais <ChevronRight className="w-4 h-4" />
                 </a>
               </motion.div>
             ))}
@@ -173,8 +177,35 @@ function Index() {
               href={WHATSAPP_LINK}
               className="inline-flex items-center gap-3 border-2 border-primary text-primary px-10 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              Solicitar análise gratuita agora
+              Solicitar diagnóstico estratégico gratuito
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Processo Section */}
+      <section id="processo" className="py-24 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Como Atuamos</span>
+            <h3 className="text-4xl md:text-5xl font-serif text-white">Como conduzimos sua estratégia jurídica</h3>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+            {[
+              { step: '01', title: 'Diagnóstico', icon: '🔍' },
+              { step: '02', title: 'Análise Jurídica', icon: '⚖️' },
+              { step: '03', title: 'Estratégia', icon: '🎯' },
+              { step: '04', title: 'Implementação', icon: '⚙️' },
+              { step: '05', title: 'Acompanhamento', icon: '📊' },
+              { step: '06', title: 'Resultados', icon: '🏆' }
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center p-6 border border-white/5 rounded-xl bg-card text-center group hover:border-primary/30 transition-all">
+                <span className="text-primary/40 group-hover:text-primary font-bold text-xs mb-4">{item.step}</span>
+                <span className="text-3xl mb-4">{item.icon}</span>
+                <h5 className="text-white text-xs font-bold uppercase tracking-widest leading-tight">{item.title}</h5>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -228,34 +259,39 @@ function Index() {
 
             <div>
               <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Sobre Nós</span>
-              <h3 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">Experiência jurídica com atendimento próximo e estratégico</h3>
+              <h3 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">Hub jurídico estratégico para empresas e legados</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                O escritório <span className="text-white font-bold">Monteiro Ramalho Advogados Associados</span> atua com excelência nas áreas previdenciária e trabalhista, oferecendo atendimento personalizado, análise detalhada e estratégias jurídicas eficientes para cada cliente.
+                Fundada em 2015, o <span className="text-white font-bold">Monteiro Ramalho Advogados Associados</span> nasceu com um propósito claro: oferecer uma advocacia moderna, próxima e orientada por resultados, disponibilidade e falando a linguagem do cliente. Acreditamos que o papel do advogado não é apenas resolver conflitos, mas contribuir para que eles sejam evitados.
               </p>
-              <div className="space-y-4 mb-10">
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="w-3 h-3 text-primary" />
+              <div className="grid grid-cols-2 gap-4 mb-10">
+                {[
+                  'Williams Ramalho',
+                  'Monteiro Neto',
+                  'Giovanna Alcântara',
+                  'Abraão Vasconcelos'
+                ].map((name, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <span className="text-white text-sm font-bold tracking-tight">{name}</span>
                   </div>
-                  <span className="text-white text-sm font-medium">Equipe de especialistas altamente qualificada</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="w-3 h-3 text-primary" />
-                  </div>
-                  <span className="text-white text-sm font-medium">Foco total em resultados e satisfação do cliente</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="w-3 h-3 text-primary" />
-                  </div>
-                  <span className="text-white text-sm font-medium">Atendimento digital ágil e sem burocracia</span>
-                </div>
+                ))}
               </div>
               <a href={WHATSAPP_LINK} className="text-primary font-bold uppercase tracking-[0.2em] flex items-center gap-3 hover:gap-5 transition-all">
-                Conheça nossa história <ArrowRight className="w-5 h-5" />
+                Agende uma conversa estratégica <ArrowRight className="w-5 h-5" />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clientes Section */}
+      <section className="py-24 border-t border-white/5 bg-background overflow-hidden">
+        <div className="container mx-auto px-4 text-center">
+          <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-12 block">Confiança e Parceria</span>
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-40 grayscale">
+            {['Grupo Marva', 'Terran', 'Fantastique', 'Direcional', 'VGA Construtora', 'Duna Engenharia', 'Metalix', 'Grupo Inovar'].map((client, i) => (
+              <span key={i} className="text-xl md:text-2xl font-serif text-white font-bold">{client}</span>
+            ))}
           </div>
         </div>
       </section>
@@ -264,9 +300,9 @@ function Index() {
       <section className="py-24 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-4xl md:text-6xl font-serif text-primary-foreground mb-8 leading-tight font-bold">Entenda seus direitos agora mesmo</h3>
+            <h3 className="text-4xl md:text-6xl font-serif text-primary-foreground mb-8 leading-tight font-bold">Sua empresa merece um parceiro jurídico estratégico</h3>
             <p className="text-primary-foreground/80 text-lg md:text-xl mb-12">
-              Não perca mais tempo. Fale com um advogado especialista e descubra o que pode ser feito no seu caso hoje.
+              Independendentemente do momento do seu negócio, contar com uma assessoria jurídica preparada para antecipar riscos e apoiar decisões faz toda a diferença.
             </p>
             <a 
               href={WHATSAPP_LINK}
@@ -274,7 +310,7 @@ function Index() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-background text-foreground px-12 py-5 rounded-full text-xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
             >
-              <Phone className="w-6 h-6 text-primary" /> Falar com um especialista
+              <Phone className="w-6 h-6 text-primary" /> Vamos conversar?
             </a>
           </div>
         </div>
@@ -290,24 +326,26 @@ function Index() {
                 <span className="text-[10px] tracking-[0.3em] text-primary uppercase -mt-1 font-bold">Advogados Associados</span>
               </div>
               <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
-                Justiça e estratégia para garantir seus direitos. Atendimento especializado com foco em resultados reais.
+                Hub jurídico estratégico para empresas e legados. Oferecemos advocacia moderna, próxima e orientada por resultados.
               </p>
             </div>
             
             <div>
               <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Áreas de Atuação</h5>
               <ul className="text-muted-foreground text-sm space-y-4">
-                <li><a href="#" className="hover:text-primary transition-colors">Direito Previdenciário</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Direito Trabalhista</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Consultoria Consultiva</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Direito Empresarial</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Direito Tributário</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Direito Imobiliário</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Compliance Trabalhista</a></li>
               </ul>
             </div>
 
             <div>
               <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Contato</h5>
               <ul className="text-muted-foreground text-sm space-y-4">
-                <li className="flex items-center gap-2">contato@monteiroramalho.com.br</li>
-                <li className="flex items-center gap-2">+55 (11) 99999-9999</li>
+                <li className="flex items-center gap-2">contato@monteiroramalho.adv.br</li>
+                <li className="flex items-center gap-2">+55 (85) 99444-3223</li>
+                <li className="flex items-center gap-2 text-[10px] uppercase font-bold text-primary">R. Albert Sabin, 65 - Fortaleza - CE</li>
                 <li className="flex items-center gap-2 font-bold text-primary">Atendimento Online Brasil</li>
               </ul>
             </div>
