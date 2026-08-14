@@ -606,7 +606,7 @@ function Index() {
       <section className="py-24 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-4xl md:text-6xl font-serif text-primary-foreground mb-8 leading-tight font-bold">Sua empresa merece um parceiro jurídico estratégico</h3>
+            <h3 className="text-4xl md:text-6xl font-serif text-primary-foreground mb-8 leading-tight">Sua empresa merece um parceiro jurídico estratégico</h3>
             <p className="text-primary-foreground/80 text-lg md:text-xl mb-12">
               Independendentemente do momento do seu negócio, contar com uma assessoria jurídica preparada para antecipar riscos e apoiar decisões faz toda a diferença.
             </p>
