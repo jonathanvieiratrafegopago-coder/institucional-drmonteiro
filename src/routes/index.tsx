@@ -681,12 +681,16 @@ function Index() {
             <div>
               <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Contato</h5>
               <ul className="text-muted-foreground text-sm space-y-4">
-                <li className="flex items-center gap-2">contato@monteiroramalho.adv.br</li>
-                <li className="flex items-center gap-2">+55 (85) 99444-3223</li>
-                <li className="flex items-center gap-2 text-[10px] uppercase font-bold text-primary">R. Albert Sabin, 65 - Fortaleza - CE</li>
-                
+                <li className="flex items-center gap-2"><span className="text-primary">•</span> contato@monteiroramalho.adv.br</li>
+                <li className="flex items-center gap-2"><span className="text-primary">•</span> (85) 99444-3223</li>
+                <li className="flex items-center gap-2"><span className="text-primary">•</span> linkedin.com/company/monteiroramalhoadvassociados</li>
+                <li className="flex items-center gap-2"><span className="text-primary">•</span> @monteiroramalhoadv</li>
+                <li className="flex items-center gap-2 text-[10px] uppercase font-bold text-primary mt-4">
+                  R. Albert Sabin, 65 - Guararapes, Fortaleza - CE
+                </li>
               </ul>
             </div>
+
           </div>
           
           <div className="pt-8 border-t border-white/5 text-center">
