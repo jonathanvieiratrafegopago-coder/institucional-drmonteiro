@@ -11,6 +11,9 @@ import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial.png.
 import { motion } from 'framer-motion';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon } from 'lucide-react';
 
+import clientesGrid1Asset from '@/assets/clientes-grid-1.png.asset.json';
+import clientesGrid2Asset from '@/assets/clientes-grid-2.png.asset.json';
+
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
@@ -362,6 +365,61 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Clientes Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Clientes
+            </motion.div>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-serif text-[#101947] leading-tight"
+            >
+              A confiança é o nosso maior reconhecimento.
+            </motion.h3>
+          </div>
+
+          <div className="space-y-8 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50"
+            >
+              <img 
+                src={clientesGrid1Asset.url} 
+                alt="Nossos Clientes - Grade 1" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50"
+            >
+              <img 
+                src={clientesGrid2Asset.url} 
+                alt="Nossos Clientes - Grade 2" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Quem Somos Section */}
       <section id="sobre" className="relative py-32 overflow-hidden">
