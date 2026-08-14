@@ -421,6 +421,38 @@ function Index() {
         </div>
       </section>
 
+      {/* Equipe Section */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-white text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Equipe
+            </motion.div>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl overflow-hidden"
+            >
+              <img 
+                src={equipeGridAsset.url} 
+                alt="Equipe Monteiro Ramalho" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Quem Somos Section */}
       <section id="sobre" className="relative py-32 overflow-hidden">
