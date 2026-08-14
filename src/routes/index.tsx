@@ -6,7 +6,7 @@ import direitoEmpresarialAsset from '@/assets/direito-empresarial.png.asset.json
 import direitoTributarioAsset from '@/assets/direito-tributario-new.png.asset.json';
 import direitoImobiliarioAsset from '@/assets/direito-imobiliario-new.png.asset.json';
 import direitoCondominialAsset from '@/assets/direito-condominial.png.asset.json';
-import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista-new.png.asset.json';
+import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista-new-2.png.asset.json';
 import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial.png.asset.json';
 
 import { motion } from 'framer-motion';
