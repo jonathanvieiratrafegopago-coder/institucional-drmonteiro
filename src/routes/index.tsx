@@ -112,29 +112,56 @@ function Index() {
               </div>
             </motion.div>
 
-            {/* Quick Proofs */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12"
+            {/* Removed redundant quick proofs from hero */}
+          </div>
+        </div>
+      </section>
+
+      {/* Nosso Impacto Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
             >
-              <div>
-                <p className="text-3xl font-serif text-primary font-bold">+10</p>
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Anos de atuação</p>
-              </div>
-              <div>
-                <p className="text-3xl font-serif text-primary font-bold">100</p>
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Empresas assessoradas</p>
-              </div>
-              <div>
-                <p className="text-3xl font-serif text-primary font-bold">+150M</p>
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Recuperados em créditos</p>
-              </div>
-              <div>
-                <p className="text-3xl font-serif text-primary font-bold">5000</p>
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Ações patrocinadas</p>
-              </div>
+              Nosso Impacto
+            </motion.div>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16"
+            >
+              Uma trajetória construída com <br className="hidden md:block" />
+              <span className="text-primary italic">consistência e resultados</span>.
+            </motion.h3>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="grid grid-cols-2 md:grid-cols-5 gap-8 p-12 rounded-3xl border border-white/10 bg-card/30 backdrop-blur-sm relative overflow-hidden group"
+            >
+              {/* Decorative accent */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
+              
+              {[
+                { value: '+10', label: 'Anos de atuação' },
+                { value: '100', label: 'Empresas assessoradas' },
+                { value: '+150M', label: 'Recuperados em créditos tributários' },
+                { value: '5000', label: 'Ações patrocinadas' },
+                { value: '8', label: 'Áreas integradas' }
+              ].map((item, i) => (
+                <div key={i} className="text-center relative">
+                  <p className="text-3xl md:text-4xl font-serif text-white font-bold mb-2">{item.value}</p>
+                  <p className="text-[10px] md:text-[11px] uppercase tracking-widest text-muted-foreground font-bold leading-tight px-2">{item.label}</p>
+                </div>
+              ))}
             </motion.div>
           </div>
         </div>
