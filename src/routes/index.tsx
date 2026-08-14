@@ -12,8 +12,8 @@ import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial-new.
 import { motion } from 'framer-motion';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
 
-import clientesGrid1Asset from '@/assets/clientes-grid-1.png.asset.json';
-import clientesGrid2Asset from '@/assets/clientes-grid-2.png.asset.json';
+import clientesGrid1Asset from '@/assets/clientes-grid-new-1.png.asset.json';
+import clientesGrid2Asset from '@/assets/clientes-grid-new-2.png.asset.json';
  import equipeGridAsset from '@/assets/equipe-new.png.asset.json';
 import logoMraAsset from '@/assets/logo-mra.png.asset.json';
 
