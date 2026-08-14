@@ -37,11 +37,12 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
-            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 md:h-16 w-auto" />
+            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto filter brightness-110" />
           </div>
+
 
           
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
@@ -70,7 +71,7 @@ function Index() {
           <img 
             src={heroPartnersAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-30 grayscale contrast-125 mix-blend-luminosity"
           />
         </div>
 
@@ -657,7 +658,7 @@ function Index() {
       </section>
 
       {/* Rodapé Section */}
-      <footer className="py-20 border-t border-white/5 bg-background">
+      <footer className="py-20 border-t border-primary/10 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-2">
