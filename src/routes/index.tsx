@@ -166,9 +166,6 @@ function Index() {
           </div>
         </div>
       </section>
-          </div>
-        </div>
-      </section>
 
       {/* Problemas Section */}
       <section id="atuacao" className="py-24 bg-card relative">
