@@ -13,6 +13,7 @@ import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, A
 
 import clientesGrid1Asset from '@/assets/clientes-grid-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-2.png.asset.json';
+import equipeGridAsset from '@/assets/equipe-grid.png.asset.json';
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -413,6 +414,38 @@ function Index() {
               <img 
                 src={clientesGrid2Asset.url} 
                 alt="Nossos Clientes - Grade 2" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Equipe Section */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-white text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Equipe
+            </motion.div>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl overflow-hidden"
+            >
+              <img 
+                src={equipeGridAsset.url} 
+                alt="Equipe Monteiro Ramalho" 
                 className="w-full h-auto"
               />
             </motion.div>
