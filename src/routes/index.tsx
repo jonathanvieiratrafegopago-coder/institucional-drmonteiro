@@ -11,6 +11,9 @@ import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial.png.
 import { motion } from 'framer-motion';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon } from 'lucide-react';
 
+import clientesGrid1Asset from '@/assets/clientes-grid-1.png.asset.json';
+import clientesGrid2Asset from '@/assets/clientes-grid-2.png.asset.json';
+
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
