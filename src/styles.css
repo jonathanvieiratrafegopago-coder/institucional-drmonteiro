@@ -70,27 +70,27 @@
   --card-foreground: oklch(0.98 0.01 260);
   --popover: oklch(0.22 0.04 264);
   --popover-foreground: oklch(0.98 0.01 260);
-  --primary: oklch(0.78 0.12 65); /* #EFA171 - Peach Primary */
+  --primary: oklch(1 0 0); /* White - Replaces #EFA171 Peach */
   --primary-foreground: oklch(0.12 0.05 264);
   --secondary: oklch(0.35 0.08 235); /* #054056 - Secondary Teal/Blue */
   --secondary-foreground: oklch(0.98 0.01 260);
   --muted: oklch(0.5 0.01 260); /* #A6A6A6 - Secondary Grey */
   --muted-foreground: oklch(0.7 0.02 260);
-  --accent: oklch(0.78 0.12 65 / 0.15);
-  --accent-foreground: oklch(0.78 0.12 65);
+  --accent: oklch(1 0 0 / 0.15);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.78 0.12 65 / 0.1);
-  --input: oklch(0.78 0.12 65 / 0.1);
-  --ring: oklch(0.78 0.12 65);
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.1);
+  --ring: oklch(1 0 0);
   
   /* Brand specific variations from visual study */
   --brand-navy: #101947;
-  --brand-peach: #EFA171;
+  --brand-peach: #ffffff;
   --brand-teal: #005371;
   --brand-grey: #6b6b6b;
   --web-bg: #04081e;
-  --web-accent: #ff8e2d;
+  --web-accent: #ffffff;
 }
 
 
