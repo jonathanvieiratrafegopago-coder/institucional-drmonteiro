@@ -364,6 +364,8 @@ function Index() {
             ))}
           </div>
         </div>
+      </section>
+
       {/* Clientes Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
