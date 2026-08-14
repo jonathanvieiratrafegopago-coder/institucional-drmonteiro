@@ -42,7 +42,7 @@ function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
-            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto filter brightness-110" />
+            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto filter brightness-0 invert" />
           </div>
 
 
@@ -114,7 +114,7 @@ function Index() {
               className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16"
             >
               Uma trajetória construída com <br className="hidden md:block" />
-              <span className="text-primary italic">consistência e resultados</span>.
+              <span className="text-white italic">consistência e resultados</span>.
             </motion.h3>
 
             <motion.div 
