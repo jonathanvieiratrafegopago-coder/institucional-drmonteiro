@@ -98,6 +98,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
+        href: "https://use.typekit.net/af/f36f6e/0000000000000000773599cf/30/l?primer=7cdb44beaddee8b965830c1af220d9396f7c687e584f0069634e9d7d4c514798&fvd=n4&v=3",
+      },
+      {
+        rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=DM+Serif+Display:ital@0;1&display=swap",
       },
       {
