@@ -590,17 +590,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Clientes Section */}
-      <section className="py-24 border-t border-white/5 bg-background overflow-hidden">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-12 block">Confiança e Parceria</span>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-40 grayscale">
-            {['Grupo Marva', 'Terran', 'Fantastique', 'Direcional', 'VGA Construtora', 'Duna Engenharia', 'Metalix', 'Grupo Inovar'].map((client, i) => (
-              <span key={i} className="text-xl md:text-2xl font-serif text-white font-bold">{client}</span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Final Section */}
       <section className="py-24 bg-primary">
