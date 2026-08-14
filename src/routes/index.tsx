@@ -135,8 +135,8 @@ function Index() {
       <section id="atuacao" className="py-24 bg-card relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Em qual dessas situações você precisa de ajuda?</h3>
-            <p className="text-muted-foreground italic">Cada caso é único. Nossa equipe analisa sua situação e orienta o melhor caminho jurídico.</p>
+            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Como podemos ajudar você hoje?</h3>
+            <p className="text-muted-foreground">Cada caso é único. Nossa equipe analisa sua situação e orienta o melhor caminho jurídico com autoridade e clareza.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -195,7 +195,7 @@ function Index() {
             ].map((dep, i) => (
               <div key={i} className="p-8 rounded-2xl bg-card border border-white/5 relative">
                 <div className="absolute -top-4 left-8 text-primary opacity-20 text-6xl font-serif">“</div>
-                <p className="text-white italic mb-8 leading-relaxed">"{dep.text}"</p>
+                <p className="text-white mb-8 leading-relaxed">"{dep.text}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-primary/20" />
                   <div>
@@ -286,11 +286,11 @@ function Index() {
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-2">
               <div className="flex flex-col mb-6">
-                <span className="text-2xl font-serif font-bold tracking-tight text-primary uppercase">Monteiro Ramalho</span>
-                <span className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase -mt-1">Advogados Associados</span>
+                <span className="text-2xl font-serif font-bold tracking-tight text-white uppercase">Monteiro Ramalho</span>
+                <span className="text-[10px] tracking-[0.3em] text-primary uppercase -mt-1 font-bold">Advogados Associados</span>
               </div>
-              <p className="text-muted-foreground text-sm max-w-sm leading-relaxed italic">
-                Sua segurança jurídica é nossa prioridade. Atuamos com transparência e foco total no seu benefício e direitos.
+              <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
+                Justiça e estratégia para garantir seus direitos. Atendimento especializado com foco em resultados reais.
               </p>
             </div>
             
@@ -306,8 +306,8 @@ function Index() {
             <div>
               <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Contato</h5>
               <ul className="text-muted-foreground text-sm space-y-4">
-                <li className="flex items-center gap-2 italic">contato@monteiroramalho.com.br</li>
-                <li className="flex items-center gap-2 italic">+55 (11) 99999-9999</li>
+                <li className="flex items-center gap-2">contato@monteiroramalho.com.br</li>
+                <li className="flex items-center gap-2">+55 (11) 99999-9999</li>
                 <li className="flex items-center gap-2 font-bold text-primary">Atendimento Online Brasil</li>
               </ul>
             </div>
