@@ -9,7 +9,7 @@ import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista.png.asse
 import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial.png.asset.json';
 
 import { motion } from 'framer-motion';
-import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon } from 'lucide-react';
+import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
 
 import clientesGrid1Asset from '@/assets/clientes-grid-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-2.png.asset.json';
@@ -338,30 +338,76 @@ function Index() {
       </section>
 
       {/* Depoimentos Section */}
-      <section id="depoimentos" className="py-24 border-y border-white/5">
+      <section id="depoimentos" className="py-24 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Feedback</span>
-            <h3 className="text-4xl md:text-5xl font-serif text-white">Clientes que confiaram em nosso trabalho</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Depoimentos
+            </motion.div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { name: "João Carlos", text: "Fui muito bem atendido e consegui meu benefício após meses de negativa. Recomendo demais!", role: "Aposentado" },
-              { name: "Maria Oliveira", text: "Escritório transparente. Resolveram minha questão trabalhista com muita rapidez e seriedade.", role: "Contadora" },
-              { name: "Ricardo Santos", text: "Especialistas de verdade. O atendimento online facilitou muito minha vida. Nota 10!", role: "Motorista" }
+              { 
+                name: "Vinicius Dias", 
+                text: "Atendimento sensacional! O escritório é rápido, eficiente e extremamente profissional em tudo.", 
+                initial: "V",
+                source: "Via Google"
+              },
+              { 
+                name: "Bruno Pinheiro", 
+                text: "Profissionais que transmitem segurança e compromisso!", 
+                initial: "B",
+                source: "Via Google"
+              },
+              { 
+                name: "Thais Lima", 
+                text: "Atendimento perfeito! Atende a distância também! Advogado super qualificado.", 
+                initial: "T",
+                source: "Via Google"
+              },
+              { 
+                name: "Helamã Souza", 
+                text: "Agradeço ao Dr. Lucas e a todos que fazem parte da Monteiro Ramalho Advogados. Eficiência e profissionalismo!", 
+                initial: "H",
+                source: "Via Google"
+              }
             ].map((dep, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-card border border-white/5 relative">
-                <div className="absolute -top-4 left-8 text-primary opacity-20 text-6xl font-serif">“</div>
-                <p className="text-white mb-8 leading-relaxed">"{dep.text}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/20" />
-                  <div>
-                    <p className="font-bold text-white text-sm tracking-tight">{dep.name}</p>
-                    <p className="text-primary text-[10px] uppercase font-bold tracking-widest">{dep.role}</p>
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative flex flex-col bg-[#101947] rounded-3xl p-8 pt-12 shadow-2xl shadow-slate-200"
+              >
+                {/* Avatar Badge */}
+                <div className="absolute -top-6 left-8 flex items-center">
+                  <div className="w-14 h-14 rounded-full bg-white border-4 border-[#101947] flex items-center justify-center text-[#101947] font-bold text-xl shadow-lg">
+                    {dep.initial}
+                  </div>
+                  <div className="ml-4 bg-white rounded-r-full py-2 px-6 pr-10 shadow-md">
+                    <p className="font-bold text-[#101947] text-sm leading-tight">{dep.name}</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-widest">{dep.source}</p>
                   </div>
                 </div>
-              </div>
+
+                <div className="mt-4 flex flex-col h-full">
+                  <p className="text-white/90 text-sm leading-relaxed mb-6 italic flex-grow">"{dep.text}"</p>
+                  
+                  {/* Stars */}
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, idx) => (
+                      <Star key={idx} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
