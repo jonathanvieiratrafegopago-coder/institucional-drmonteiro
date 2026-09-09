@@ -90,13 +90,13 @@ function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="inicio" className="relative flex items-center justify-center overflow-hidden bg-secondary pt-24 md:pt-0 md:min-h-screen">
         {/* Imagem Hero Oficial */}
-        <div className="absolute inset-0 z-0">
+        <div className="relative w-full md:absolute md:inset-0 md:z-0">
           <img 
             src={heroOfficialAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-cover object-top"
+            className="w-full h-auto md:h-full object-contain md:object-cover object-top"
           />
           {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
           <div className="absolute inset-0 bg-background/5" />
