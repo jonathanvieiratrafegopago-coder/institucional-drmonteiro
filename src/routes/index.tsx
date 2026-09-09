@@ -1,43 +1,28 @@
 import { createFileRoute } from '@tanstack/react-router';
-import heroOfficialUrl from '@/assets/hero-official-new.png';
-import quemSomosBgUrl from '@/assets/quem-somos-bg.png';
-import direitoEmpresarialUrl from '@/assets/direito-empresarial.png';
-import direitoTributarioUrl from '@/assets/direito-tributario-new.png';
-import direitoImobiliarioUrl from '@/assets/direito-imobiliario-new.png';
-import direitoCondominialUrl from '@/assets/direito-condominial-new.png';
-import complianceTrabalhistaUrl from '@/assets/compliance-trabalhista-new-2.png';
-import planejamentoPatrimonialUrl from '@/assets/planejamento-patrimonial-new.png';
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 
-import clientesGrid1Url from '@/assets/clientes-grid-new-1.png';
-import clientesGrid2Url from '@/assets/clientes-grid-new-2.png';
-import equipeAdvogadosUrl from '@/assets/equipe-new.png';
-import equipeOficialUrl from '@/assets/equipe-oficial.jpg';
-import blogHerancaUrl from '@/assets/blog-heranca.jpg';
-import blogGestaoTerceirosUrl from '@/assets/blog-gestao-terceiros.jpg';
-import blogCreditoPrevidenciarioUrl from '@/assets/blog-credito-previdenciario.jpg';
-import logoMraUrl from '@/assets/logo-mra-transparent.png';
-
-const heroOfficialAsset = { url: heroOfficialUrl };
-const quemSomosBgAsset = { url: quemSomosBgUrl };
-const direitoEmpresarialAsset = { url: direitoEmpresarialUrl };
-const direitoTributarioAsset = { url: direitoTributarioUrl };
-const direitoImobiliarioAsset = { url: direitoImobiliarioUrl };
-const direitoCondominialAsset = { url: direitoCondominialUrl };
-const complianceTrabalhistaAsset = { url: complianceTrabalhistaUrl };
-const planejamentoPatrimonialAsset = { url: planejamentoPatrimonialUrl };
-const clientesGrid1Asset = { url: clientesGrid1Url };
-const clientesGrid2Asset = { url: clientesGrid2Url };
-const equipeAdvogadosAsset = { url: equipeAdvogadosUrl };
-const equipeOficialAsset = { url: equipeOficialUrl };
-const blogHerancaAsset = { url: blogHerancaUrl };
-const blogGestaoTerceirosAsset = { url: blogGestaoTerceirosUrl };
-const blogCreditoPrevidenciarioAsset = { url: blogCreditoPrevidenciarioUrl };
-const logoMraAsset = { url: logoMraUrl };
+const images = {
+  hero: '/images/hero-official-new.jpg',
+  about: '/images/quem-somos-bg.jpg',
+  business: '/images/direito-empresarial.jpg',
+  tax: '/images/direito-tributario-new.jpg',
+  realEstate: '/images/direito-imobiliario-new.jpg',
+  condominium: '/images/direito-condominial-new.jpg',
+  laborCompliance: '/images/compliance-trabalhista-new-2.jpg',
+  estatePlanning: '/images/planejamento-patrimonial-new.jpg',
+  clientsOne: '/images/clientes-grid-new-1.jpg',
+  clientsTwo: '/images/clientes-grid-new-2.jpg',
+  lawyers: '/images/equipe-new.jpg',
+  staff: '/images/equipe-oficial.jpg',
+  blogInheritance: '/images/blog-heranca.jpg',
+  blogThirdPartyManagement: '/images/blog-gestao-terceiros.jpg',
+  blogSocialSecurityCredit: '/images/blog-credito-previdenciario.jpg',
+  logo: '/images/logo-mra-transparent.png',
+} as const;
 
 
 export const Route = createFileRoute('/')({
@@ -81,7 +66,7 @@ function Index() {
       >
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
-            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
+            <img src={images.logo} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
           </div>
 
 
@@ -111,7 +96,7 @@ function Index() {
         {/* Imagem Hero Oficial */}
         <div className="relative w-full md:absolute md:inset-0 md:z-0">
           <img 
-            src={heroOfficialAsset.url} 
+            src={images.hero} 
             alt="Sócios Monteiro Ramalho" 
             className="w-full h-auto md:h-full object-contain md:object-cover object-top"
           />
@@ -198,7 +183,7 @@ function Index() {
                 title: 'Direito Empresarial', 
                 desc: 'Constituição societária, governança, acordos entre sócios e contratos estratégicos.', 
                 icon: Scale,
-                image: direitoEmpresarialAsset.url,
+                image: images.business,
                 bullets: ['Sociedades', 'Contratos', 'Governança', 'Startups'],
                 highlight: 'Muito além da burocracia, buscamos ser parceiros estratégicos do seu crescimento empresarial.'
               },
@@ -206,7 +191,7 @@ function Index() {
                 title: 'Direito Tributário', 
                 desc: 'Planejamento, recuperação de créditos e defesas administrativas focadas em ganho financeiro.', 
                 icon: Shield,
-                image: direitoTributarioAsset.url,
+                image: images.tax,
                 mainTitle: 'Eficiência tributária também gera resultados.',
                 bullets: ['Planejamento.', 'Recuperação de créditos.', 'Revisões fiscais.', 'Defesas administrativas.', 'Regularizações.'],
                 highlight: 'MUITO ALÉM DA CONFORMIDADE, BUSCAMOS IDENTIFICAR OPORTUNIDADES LEGÍTIMAS DE GANHO FINANCEIRO PARA NOSSOS CLIENTES.'
@@ -215,7 +200,7 @@ function Index() {
                 title: 'Direito Imobiliário', 
                 desc: 'Regularizações, due diligence e segurança jurídica em cada operação patrimonial.', 
                 icon: CheckCircle,
-                image: direitoImobiliarioAsset.url,
+                image: images.realEstate,
                 mainTitle: 'Segurança em cada decisão imobiliária.',
                 bullets: ['Regularizações.', 'Due diligence.', 'Contratos.', 'Negociações.', 'Defesa patrimonial.'],
                 highlight: 'MUITO ALÉM DA NEGOCIAÇÃO DE IMÓVEIS, ATUAMOS PARA PROTEGER PATRIMÔNIOS, REDUZIR RISCOS E OFERECER SEGURANÇA JURÍDICA EM CADA OPERAÇÃO.'
@@ -224,7 +209,7 @@ function Index() {
                 title: 'Direito Condominial', 
                 desc: 'Gestão jurídica segura para condomínios, implantação, convenções e mediação.', 
                 icon: Users,
-                image: direitoCondominialAsset.url,
+                image: images.condominium,
                 mainTitle: 'Gestão condominial exige respaldo jurídico.',
                 bullets: ['Implantação.', 'Assembleias.', 'Convenções.', 'Contratos.', 'Síndicos.', 'Prestação de contas.', 'Previsão Orçamentária.', 'Obras.', 'Mediação.'],
                 highlight: 'MAIS DO QUE SOLUCIONAR CONFLITOS, CONTRIBUÍMOS PARA UMA GESTÃO CONDOMINIAL SEGURA, TRANSPARENTE E JURIDICAMENTE ESTRUTURADA.'
@@ -233,7 +218,7 @@ function Index() {
                 title: 'Compliance Trabalhista', 
                 desc: 'Estruturação de processos internos para redução de riscos e prevenção de passivos.', 
                 icon: Gavel,
-                image: complianceTrabalhistaAsset.url,
+                image: images.laborCompliance,
                 mainTitle: 'A conformidade começa antes da fiscalização.',
                 bullets: ['NR-1.', 'PGR.', 'Rotinas.', 'Documentação.', 'Processos internos.', 'Treinamentos.', 'Prevenção de passivos.'],
                 highlight: 'MUITO ALÉM DA ADEQUAÇÃO ÀS NORMAS, ESTRUTURAMOS PROCESSOS QUE REDUZEM RISCOS, FORTALECEM A GESTÃO E PREVINEM PASSIVOS TRABALHISTAS.'
@@ -242,7 +227,7 @@ function Index() {
                 title: 'Planejamento Patrimonial', 
                 desc: 'Holding, sucessão e governança para preservar legados e proteger gerações.', 
                 icon: Award,
-                image: planejamentoPatrimonialAsset.url,
+                image: images.estatePlanning,
                 mainTitle: 'Patrimônio protegido. Futuro organizado.',
                 bullets: ['Holding.', 'Sucessão.', 'Governança.', 'Famílias empresárias.', 'Eficiência Tributária.'],
                 highlight: 'MAIS DO QUE ORGANIZAR BENS, ESTRUTURAMOS ESTRATÉGIAS PARA PROTEGER PATRIMÔNIOS, PRESERVAR LEGADOS E GARANTIR SEGURANÇA ÀS PRÓXIMAS GERAÇÕES.'
@@ -257,13 +242,7 @@ function Index() {
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-20" />
-                  {item.image ? (
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
-                  ) : (
-                    <div className="w-full h-full bg-primary/5 flex items-center justify-center">
-                      <item.icon className="w-16 h-16 text-primary/20" />
-                    </div>
-                  )}
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
                   
                   {/* Badge */}
                   <div className="absolute top-6 left-6 z-30">
@@ -488,7 +467,7 @@ function Index() {
               className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
-                src={clientesGrid1Asset.url} 
+                src={images.clientsOne} 
                 alt="Nossos Clientes - Grade 1" 
                 className="w-full h-auto"
               />
@@ -501,7 +480,7 @@ function Index() {
               className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
-                src={clientesGrid2Asset.url} 
+                src={images.clientsTwo} 
                 alt="Nossos Clientes - Grade 2" 
                 className="w-full h-auto"
               />
@@ -533,7 +512,7 @@ function Index() {
               className="rounded-3xl overflow-hidden"
             >
               <img 
-                src={equipeAdvogadosAsset.url} 
+                src={images.lawyers} 
                 alt="Advogados Monteiro Ramalho" 
                 className="w-full h-auto"
                 loading="lazy"
@@ -574,7 +553,7 @@ function Index() {
             className="max-w-4xl mx-auto overflow-hidden rounded-lg border border-border"
           >
             <img
-              src={equipeOficialAsset.url}
+              src={images.staff}
               alt="Equipe de funcionários do Monteiro Ramalho Advogados Associados"
               className="w-full aspect-square object-cover object-top"
               loading="lazy"
@@ -590,7 +569,7 @@ function Index() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-background/90 z-10" />
           <img 
-            src={quemSomosBgAsset.url} 
+            src={images.about} 
             alt="Escritório Monteiro Ramalho" 
             className="w-full h-full object-cover opacity-10 md:opacity-30 grayscale"
           />
@@ -701,7 +680,7 @@ function Index() {
                 summary: 'Uma análise sobre planejamento sucessório, proteção patrimonial e os riscos jurídicos da ausência de formalização prévia.',
                 category: 'Planejamento patrimonial',
                 source: 'Economic News Brasil',
-                image: blogHerancaAsset.url,
+                image: images.blogInheritance,
                 imageAlt: 'Monteiro Neto em artigo sobre proteção patrimonial',
                 href: 'https://economicnewsbrasil.com.br/2026/03/18/heranca-anita-harley-patrimonio/'
               },
@@ -710,7 +689,7 @@ function Index() {
                 summary: 'Como processos jurídicos, monitoramento e tecnologia ajudam empresas a reduzir riscos na contratação de serviços terceirizados.',
                 category: 'Direito empresarial',
                 source: 'Migalhas',
-                image: blogGestaoTerceirosAsset.url,
+                image: images.blogThirdPartyManagement,
                 imageAlt: 'Ilustração do artigo sobre gestão jurídica de terceiros',
                 href: 'https://www.migalhas.com.br/depeso/340732/gestao-de-terceiros-como-estrategia-na-advocacia-corporativa'
               },
@@ -719,7 +698,7 @@ function Index() {
                 summary: 'Uma visão técnica sobre créditos previdenciários em condenações trabalhistas e oportunidades legítimas de recuperação para empresas.',
                 category: 'Direito tributário',
                 source: 'Migalhas',
-                image: blogCreditoPrevidenciarioAsset.url,
+                image: images.blogSocialSecurityCredit,
                 imageAlt: 'Ilustração do artigo sobre crédito previdenciário',
                 href: 'https://www.migalhas.com.br/depeso/346937/credito-previdenciario-decaido-como-fonte-de-recursos-para-as-empresas'
               }
@@ -791,7 +770,7 @@ function Index() {
           <div className="grid md:grid-cols-4 gap-10 md:gap-12 mb-16">
             <div className="md:col-span-2">
               <div className="mb-6">
-                <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4 invert" />
+                <img src={images.logo} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4 invert" />
               </div>
 
               <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
