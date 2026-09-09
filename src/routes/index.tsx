@@ -83,7 +83,7 @@ function Index() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-primary px-6 py-2.5 rounded-full text-primary-foreground font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-primary/20"
           >
-            <Phone className="w-4 h-4" /> WhatsApp
+            <WhatsAppIcon className="w-4 h-4" /> WhatsApp
           </a>
 
         </div>
@@ -96,7 +96,7 @@ function Index() {
           <img 
             src={heroOfficialAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-contain object-top p-4 md:p-8"
+            className="w-full h-full object-cover object-top"
           />
           {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
           <div className="absolute inset-0 bg-background/5" />
