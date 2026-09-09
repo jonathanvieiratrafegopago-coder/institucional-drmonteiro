@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { HeadContent } from '@tanstack/react-router';
 import heroOfficialAsset from '@/assets/hero-official-new.png.asset.json';
 import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
 import direitoEmpresarialAsset from '@/assets/direito-empresarial.png.asset.json';
@@ -25,6 +24,7 @@ export const Route = createFileRoute('/')({
       { name: "description", content: "Assessoria jurídica estratégica para empresas e legados. Especialistas em Direito Tributário, Imobiliário, Condominial e Planejamento Patrimonial." },
       { property: "og:title", content: "Monteiro Ramalho Advogados Associados" },
       { property: "og:description", content: "Transformamos o jurídico em um ativo estratégico." },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: heroOfficialAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -76,7 +76,7 @@ function Index() {
             className="w-full h-full object-contain object-top p-4 md:p-8"
           />
           {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
-          <div className="absolute inset-0 bg-black/5" />
+          <div className="absolute inset-0 bg-background/5" />
         </div>
 
         {/* Overlay clicável para WhatsApp em toda a área conforme o layout limpo solicitado */}
@@ -111,10 +111,10 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-serif text-white leading-tight mb-16 !font-light"
+              className="text-4xl md:text-6xl font-serif text-foreground leading-tight mb-16 !font-light"
             >
               Uma trajetória construída com <br className="hidden md:block" />
-              <span className="text-white italic">consistência e resultados</span>.
+              <span className="text-primary italic">consistência e resultados</span>.
             </motion.h3>
 
             <motion.div 
@@ -122,7 +122,7 @@ function Index() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="grid grid-cols-2 md:grid-cols-5 gap-8 p-12 rounded-3xl border border-white/10 bg-card/30 backdrop-blur-sm relative overflow-hidden group"
+              className="grid grid-cols-2 md:grid-cols-5 gap-8 p-12 rounded-3xl border border-border bg-card/30 backdrop-blur-sm relative overflow-hidden group"
             >
               {/* Decorative accent */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
@@ -135,7 +135,7 @@ function Index() {
                 { value: '8', label: 'Áreas integradas' }
               ].map((item, i) => (
                 <div key={i} className="text-center relative">
-                  <p className="text-3xl md:text-4xl font-serif text-white font-bold mb-2">{item.value}</p>
+                  <p className="text-3xl md:text-4xl font-serif text-primary font-bold mb-2">{item.value}</p>
                   <p className="text-[10px] md:text-[11px] uppercase tracking-widest text-muted-foreground font-bold leading-tight px-2">{item.label}</p>
                 </div>
               ))}
@@ -148,7 +148,7 @@ function Index() {
       <section id="atuacao" className="py-24 bg-card relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight !font-light">Soluções jurídicas para diferentes desafios</h3>
+            <h3 className="text-4xl md:text-5xl font-serif text-card-foreground mb-6 leading-tight !font-light">Soluções jurídicas para diferentes desafios</h3>
             <p className="text-muted-foreground">Combinamos visão jurídica, inteligência de negócios e planejamento para gerar previsibilidade e eficiência para empresas e legados.</p>
           </div>
 
@@ -211,7 +211,7 @@ function Index() {
               <motion.div 
                 key={i}
                 whileHover={{ y: -5 }}
-                className="group relative flex flex-col h-full border border-white/5 rounded-2xl overflow-hidden bg-background hover:border-primary/50 transition-all"
+                className="group relative flex flex-col h-full border border-border rounded-2xl overflow-hidden bg-background hover:border-primary/50 transition-all"
               >
                 {/* Visual Header with Image and Overlay */}
                 <div className="relative h-48 overflow-hidden">
@@ -235,7 +235,7 @@ function Index() {
 
                 {/* Content */}
                 <div className="p-8 flex flex-col flex-grow">
-                  <h4 className="text-2xl font-serif text-white mb-4 leading-tight">
+                  <h4 className="text-2xl font-serif text-foreground mb-4 leading-tight">
                     {item.mainTitle || item.title}
                   </h4>
                   
@@ -243,7 +243,7 @@ function Index() {
                   <div className="mb-6 flex-grow">
                     <ul className="space-y-2">
                       {item.bullets.map((bullet, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground group-hover:text-white transition-colors">
+                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                           <span className="text-primary mt-1">•</span>
                           <span>{bullet}</span>
                         </li>
@@ -252,7 +252,7 @@ function Index() {
                   </div>
 
                   {/* Highlight text from prints */}
-                  <p className="text-[10px] md:text-[11px] font-bold text-muted-foreground group-hover:text-primary leading-relaxed border-t border-white/5 pt-6 uppercase tracking-wider transition-colors">
+                  <p className="text-[10px] md:text-[11px] font-bold text-muted-foreground group-hover:text-primary leading-relaxed border-t border-border pt-6 uppercase tracking-wider transition-colors">
                     {item.highlight}
                   </p>
                 </div>
@@ -279,14 +279,14 @@ function Index() {
       </section>
 
       {/* Diferencial Estratégico Section */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden border-y border-slate-100">
+      <section className="py-24 bg-surface text-surface-foreground relative overflow-hidden border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h3 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-serif text-[#101947] leading-tight mb-4"
+              className="text-4xl md:text-5xl font-serif text-surface-foreground leading-tight mb-4"
             >
               Não entregamos apenas advocacia.
             </motion.h3>
@@ -295,7 +295,7 @@ function Index() {
           {/* Timeline-style grid */}
           <div className="relative max-w-6xl mx-auto mb-16">
             {/* Desktop Horizontal Line */}
-            <div className="absolute top-1/2 left-0 w-full h-px bg-slate-200 -translate-y-1/2 hidden md:block" />
+            <div className="absolute top-1/2 left-0 w-full h-px bg-muted/40 -translate-y-1/2 hidden md:block" />
             
             <div className="grid grid-cols-2 md:grid-cols-6 gap-8 relative z-10">
               {[
@@ -314,10 +314,10 @@ function Index() {
                   transition={{ delay: i * 0.1 }}
                   className="flex flex-col items-center text-center group"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#101947] text-white flex items-center justify-center font-bold text-sm mb-6 shadow-lg shadow-[#101947]/20 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm mb-6 shadow-lg group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all">
                     {item.step}
                   </div>
-                  <h5 className="text-[10px] font-bold text-[#101947] uppercase tracking-wider leading-tight px-2 group-hover:text-primary transition-colors">
+                  <h5 className="text-[10px] font-bold text-surface-foreground uppercase tracking-wider leading-tight px-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h5>
                 </motion.div>
@@ -331,7 +331,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl font-serif text-[#101947] leading-relaxed"
+              className="text-xl md:text-2xl font-serif text-surface-foreground leading-relaxed"
             >
               Porque acreditamos que o jurídico deve contribuir para o crescimento do negócio, e não apenas atuar quando o problema já aconteceu.
             </motion.p>
@@ -341,14 +341,14 @@ function Index() {
 
 
       {/* Depoimentos Section */}
-      <section id="depoimentos" className="py-24 bg-white border-y border-slate-100">
+      <section id="depoimentos" className="py-24 bg-surface text-surface-foreground border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+              className="inline-block px-4 py-1.5 rounded-full border border-border bg-surface text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
             >
               Depoimentos
             </motion.div>
@@ -387,21 +387,21 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative flex flex-col bg-[#101947] rounded-3xl p-8 pt-12 shadow-2xl shadow-slate-200"
+                className="relative flex flex-col bg-secondary rounded-3xl p-8 pt-12 shadow-xl"
               >
                 {/* Avatar Badge */}
                 <div className="absolute -top-6 left-8 flex items-center">
-                  <div className="w-14 h-14 rounded-full bg-white border-4 border-[#101947] flex items-center justify-center text-[#101947] font-bold text-xl shadow-lg">
+                  <div className="w-14 h-14 rounded-full bg-surface border-4 border-secondary flex items-center justify-center text-secondary font-bold text-xl shadow-lg">
                     {dep.initial}
                   </div>
-                  <div className="ml-4 bg-white rounded-r-full py-2 px-6 pr-10 shadow-md">
-                    <p className="font-bold text-[#101947] text-sm leading-tight">{dep.name}</p>
-                    <p className="text-[10px] text-slate-400 uppercase tracking-widest">{dep.source}</p>
+                  <div className="ml-4 bg-surface rounded-r-full py-2 px-6 pr-10 shadow-md">
+                    <p className="font-bold text-secondary text-sm leading-tight">{dep.name}</p>
+                    <p className="text-[10px] text-muted uppercase tracking-widest">{dep.source}</p>
                   </div>
                 </div>
 
                 <div className="mt-4 flex flex-col h-full">
-                  <p className="text-white/90 text-sm leading-relaxed mb-6 italic flex-grow">"{dep.text}"</p>
+                  <p className="text-secondary-foreground/90 text-sm leading-relaxed mb-6 italic flex-grow">"{dep.text}"</p>
                   
                   {/* Stars */}
                   <div className="flex gap-1">
@@ -417,14 +417,14 @@ function Index() {
       </section>
 
       {/* Clientes Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-24 bg-surface text-surface-foreground relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+              className="inline-block px-4 py-1.5 rounded-full border border-border bg-surface text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
             >
               Clientes
             </motion.div>
@@ -433,7 +433,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-serif text-[#101947] leading-tight"
+              className="text-4xl md:text-5xl font-serif text-surface-foreground leading-tight"
             >
               A confiança é o nosso maior reconhecimento.
             </motion.h3>
@@ -445,7 +445,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50"
+              className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
                 src={clientesGrid1Asset.url} 
@@ -458,7 +458,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50"
+              className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
                 src={clientesGrid2Asset.url} 
@@ -471,14 +471,14 @@ function Index() {
       </section>
 
       {/* Equipe Section */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
+      <section className="py-24 bg-surface text-surface-foreground relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 rounded-full border border-slate-200 bg-white text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+              className="inline-block px-4 py-1.5 rounded-full border border-border bg-surface text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
             >
               Equipe
             </motion.div>
@@ -531,7 +531,7 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-6xl font-serif text-white leading-tight"
+                className="text-4xl md:text-6xl font-serif text-foreground leading-tight"
               >
                 Hub jurídico estratégico para <span className="text-primary italic">empresas e legados</span>.
               </motion.h3>
@@ -545,7 +545,7 @@ function Index() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-muted-foreground leading-relaxed"
               >
-                Fundada em 2015, o <span className="text-white font-bold">Monteiro Ramalho Advogados Associados</span> nasceu com um propósito claro: oferecer uma advocacia moderna, próxima e orientada por resultados, disponibilidade e falando a linguagem do cliente.
+                Fundada em 2015, o <span className="text-foreground font-bold">Monteiro Ramalho Advogados Associados</span> nasceu com um propósito claro: oferecer uma advocacia moderna, próxima e orientada por resultados, disponibilidade e falando a linguagem do cliente.
               </motion.p>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -571,7 +571,7 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10"
+                className="grid grid-cols-2 gap-6 pt-8 border-t border-border"
               >
                 {[
                   'Williams Ramalho',
@@ -581,7 +581,7 @@ function Index() {
                 ].map((name, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-white text-sm font-bold tracking-tight">{name}</span>
+                    <span className="text-foreground text-sm font-bold tracking-tight">{name}</span>
                   </div>
                 ))}
               </motion.div>
@@ -592,20 +592,20 @@ function Index() {
 
 
       {/* CTA Final Section */}
-      <section className="py-24 bg-primary">
+      <section className="py-24 bg-secondary border-y border-primary/20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-4xl md:text-6xl font-serif text-primary-foreground mb-8 leading-tight">Sua empresa merece um parceiro jurídico estratégico</h3>
-            <p className="text-primary-foreground/80 text-lg md:text-xl mb-12">
+            <h3 className="text-4xl md:text-6xl font-serif text-secondary-foreground mb-8 leading-tight">Sua empresa merece um parceiro jurídico estratégico</h3>
+            <p className="text-secondary-foreground/80 text-lg md:text-xl mb-12">
               Independendentemente do momento do seu negócio, contar com uma assessoria jurídica preparada para antecipar riscos e apoiar decisões faz toda a diferença.
             </p>
             <a 
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-background text-foreground px-12 py-5 rounded-full text-xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-12 py-5 rounded-full text-xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
             >
-              <Phone className="w-6 h-6 text-primary" /> Vamos conversar?
+              <Phone className="w-6 h-6" /> Vamos conversar?
             </a>
           </div>
         </div>
@@ -626,7 +626,7 @@ function Index() {
             </div>
             
             <div>
-              <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Áreas de Atuação</h5>
+              <h5 className="text-foreground font-bold text-xs uppercase tracking-widest mb-6">Áreas de Atuação</h5>
               <ul className="text-muted-foreground text-sm space-y-4">
                 <li><a href="#" className="hover:text-primary transition-colors">Direito Empresarial</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Direito Tributário</a></li>
@@ -636,7 +636,7 @@ function Index() {
             </div>
 
             <div>
-              <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Contato</h5>
+              <h5 className="text-foreground font-bold text-xs uppercase tracking-widest mb-6">Contato</h5>
               <ul className="text-muted-foreground text-sm space-y-4">
                 <li className="flex items-center gap-2"><span className="text-primary">•</span> contato@monteiroramalho.adv.br</li>
                 <li className="flex items-center gap-2"><span className="text-primary">•</span> (85) 99444-3223</li>
@@ -650,7 +650,7 @@ function Index() {
 
           </div>
           
-          <div className="pt-8 border-t border-white/5 text-center">
+          <div className="pt-8 border-t border-border text-center">
             <p className="text-muted-foreground text-[10px] uppercase tracking-widest mb-4">
               Aviso legal: Este site não garante resultados. Cada caso deve ser analisado individualmente.
             </p>
@@ -666,10 +666,10 @@ function Index() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group"
+        className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-secondary text-secondary-foreground border border-primary/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all group"
       >
         <Phone className="w-8 h-8 fill-current" />
-        <span className="absolute right-full mr-4 bg-background/90 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10 backdrop-blur-sm">
+        <span className="absolute right-full mr-4 bg-background/90 text-foreground text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border backdrop-blur-sm">
           Fale Conosco Agora
         </span>
       </a>
