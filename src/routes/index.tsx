@@ -825,7 +825,7 @@ function Index() {
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-secondary text-secondary-foreground border border-primary/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all group"
       >
-        <Phone className="w-8 h-8 fill-current" />
+        <WhatsAppIcon className="w-8 h-8" />
         <span className="absolute right-full mr-4 bg-background/90 text-foreground text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border backdrop-blur-sm">
           Fale Conosco Agora
         </span>
