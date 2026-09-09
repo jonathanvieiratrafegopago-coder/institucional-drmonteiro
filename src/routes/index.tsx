@@ -13,7 +13,11 @@ import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, A
 
 import clientesGrid1Asset from '@/assets/clientes-grid-new-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-new-2.png.asset.json';
- import equipeGridAsset from '@/assets/equipe-new.png.asset.json';
+import equipeAdvogadosAsset from '@/assets/equipe-new.png.asset.json';
+import equipeOficialAsset from '@/assets/equipe-oficial.jpg.asset.json';
+import blogHerancaAsset from '@/assets/blog-heranca.jpg.asset.json';
+import blogGestaoTerceirosAsset from '@/assets/blog-gestao-terceiros.jpg.asset.json';
+import blogCreditoPrevidenciarioAsset from '@/assets/blog-credito-previdenciario.jpg.asset.json';
 import logoMraAsset from '@/assets/logo-mra.png.asset.json';
 
 
@@ -51,6 +55,7 @@ function Index() {
             <a href="#inicio" className="hover:text-primary transition-colors">Início</a>
             <a href="#atuacao" className="hover:text-primary transition-colors">Atuação</a>
             <a href="#sobre" className="hover:text-primary transition-colors">O Escritório</a>
+            <a href="#blog" className="hover:text-primary transition-colors">Blog</a>
             <a href="#depoimentos" className="hover:text-primary transition-colors">Depoimentos</a>
           </div>
 
@@ -480,7 +485,7 @@ function Index() {
               viewport={{ once: true }}
               className="inline-block px-4 py-1.5 rounded-full border border-border bg-surface text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
             >
-              Equipe
+              Advogados
             </motion.div>
           </div>
 
@@ -493,12 +498,53 @@ function Index() {
               className="rounded-3xl overflow-hidden"
             >
               <img 
-                src={equipeGridAsset.url} 
-                alt="Equipe Monteiro Ramalho" 
+                src={equipeAdvogadosAsset.url} 
+                alt="Advogados Monteiro Ramalho" 
                 className="w-full h-auto"
+                loading="lazy"
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Equipe de Funcionários Section */}
+      <section className="py-24 bg-background text-foreground relative overflow-hidden border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Nossa Equipe
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-serif text-foreground leading-tight"
+            >
+              Pessoas que fazem a excelência <span className="text-primary italic">acontecer</span>.
+            </motion.h3>
+          </div>
+
+          <motion.figure
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto overflow-hidden rounded-lg border border-border"
+          >
+            <img
+              src={equipeOficialAsset.url}
+              alt="Equipe de funcionários do Monteiro Ramalho Advogados Associados"
+              className="w-full aspect-square object-cover object-top"
+              loading="lazy"
+            />
+          </motion.figure>
         </div>
       </section>
 
@@ -586,6 +632,99 @@ function Index() {
                 ))}
               </motion.div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="py-24 bg-surface text-surface-foreground border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-border bg-surface text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Artigos e análises
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-serif text-surface-foreground leading-tight"
+            >
+              Conhecimento jurídico para <span className="text-primary italic">decisões estratégicas</span>.
+            </motion.h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: 'Herança Anita Harley expõe risco bilionário ignorado por empresários',
+                summary: 'Uma análise sobre planejamento sucessório, proteção patrimonial e os riscos jurídicos da ausência de formalização prévia.',
+                category: 'Planejamento patrimonial',
+                source: 'Economic News Brasil',
+                image: blogHerancaAsset.url,
+                imageAlt: 'Monteiro Neto em artigo sobre proteção patrimonial',
+                href: 'https://economicnewsbrasil.com.br/2026/03/18/heranca-anita-harley-patrimonio/'
+              },
+              {
+                title: 'Gestão de terceiros como ferramenta estratégica na advocacia corporativa',
+                summary: 'Como processos jurídicos, monitoramento e tecnologia ajudam empresas a reduzir riscos na contratação de serviços terceirizados.',
+                category: 'Direito empresarial',
+                source: 'Migalhas',
+                image: blogGestaoTerceirosAsset.url,
+                imageAlt: 'Ilustração do artigo sobre gestão jurídica de terceiros',
+                href: 'https://www.migalhas.com.br/depeso/340732/gestao-de-terceiros-como-estrategia-na-advocacia-corporativa'
+              },
+              {
+                title: 'Crédito previdenciário decaído como fonte de recursos para as empresas',
+                summary: 'Uma visão técnica sobre créditos previdenciários em condenações trabalhistas e oportunidades legítimas de recuperação para empresas.',
+                category: 'Direito tributário',
+                source: 'Migalhas',
+                image: blogCreditoPrevidenciarioAsset.url,
+                imageAlt: 'Ilustração do artigo sobre crédito previdenciário',
+                href: 'https://www.migalhas.com.br/depeso/346937/credito-previdenciario-decaido-como-fonte-de-recursos-para-as-empresas'
+              }
+            ].map((article, index) => (
+              <motion.article
+                key={article.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col min-h-full border border-border bg-surface overflow-hidden rounded-lg"
+              >
+                <a href={article.href} target="_blank" rel="noopener noreferrer" className="group block h-56 overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.imageAlt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </a>
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted mb-5">
+                    <span className="text-primary">{article.category}</span>
+                    <span aria-hidden="true">•</span>
+                    <span>{article.source}</span>
+                  </div>
+                  <h4 className="font-serif text-2xl leading-tight text-surface-foreground mb-4">{article.title}</h4>
+                  <p className="text-sm leading-relaxed text-muted mb-7">{article.summary}</p>
+                  <a
+                    href={article.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ler artigo: ${article.title}`}
+                    className="mt-auto inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-widest hover:text-surface-foreground transition-colors"
+                  >
+                    Ler artigo <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
