@@ -18,7 +18,7 @@ import equipeOficialAsset from '@/assets/equipe-oficial.jpg.asset.json';
 import blogHerancaAsset from '@/assets/blog-heranca.jpg.asset.json';
 import blogGestaoTerceirosAsset from '@/assets/blog-gestao-terceiros.jpg.asset.json';
 import blogCreditoPrevidenciarioAsset from '@/assets/blog-credito-previdenciario.jpg.asset.json';
-import logoMraAsset from '@/assets/logo-mra.png.asset.json';
+import logoMraAsset from '@/assets/logo-mra-transparent.png.asset.json';
 
 
 export const Route = createFileRoute('/')({
@@ -46,7 +46,7 @@ function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
-            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto filter brightness-0 invert" />
+            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
           </div>
 
 
@@ -756,7 +756,7 @@ function Index() {
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-2">
               <div className="mb-6">
-                <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4" />
+                <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4 invert" />
               </div>
 
               <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
