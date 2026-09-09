@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { HeadContent } from '@tanstack/react-router';
 import heroOfficialAsset from '@/assets/hero-official-new.png.asset.json';
 import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
 import direitoEmpresarialAsset from '@/assets/direito-empresarial.png.asset.json';
@@ -25,6 +24,7 @@ export const Route = createFileRoute('/')({
       { name: "description", content: "Assessoria jurídica estratégica para empresas e legados. Especialistas em Direito Tributário, Imobiliário, Condominial e Planejamento Patrimonial." },
       { property: "og:title", content: "Monteiro Ramalho Advogados Associados" },
       { property: "og:description", content: "Transformamos o jurídico em um ativo estratégico." },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: heroOfficialAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -571,7 +571,7 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10"
+                className="grid grid-cols-2 gap-6 pt-8 border-t border-border"
               >
                 {[
                   'Williams Ramalho',
