@@ -13,6 +13,7 @@ import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, A
 
 import clientesGrid1Asset from '@/assets/clientes-grid-new-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-new-2.png.asset.json';
+import equipeAdvogadosAsset from '@/assets/equipe-new.png.asset.json';
 import equipeOficialAsset from '@/assets/equipe-oficial.jpg.asset.json';
 import blogHerancaAsset from '@/assets/blog-heranca.jpg.asset.json';
 import blogGestaoTerceirosAsset from '@/assets/blog-gestao-terceiros.jpg.asset.json';
@@ -484,7 +485,7 @@ function Index() {
               viewport={{ once: true }}
               className="inline-block px-4 py-1.5 rounded-full border border-border bg-surface text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
             >
-              Equipe
+              Advogados
             </motion.div>
           </div>
 
@@ -497,13 +498,53 @@ function Index() {
               className="rounded-3xl overflow-hidden"
             >
               <img 
-                src={equipeOficialAsset.url} 
-                alt="Equipe Monteiro Ramalho" 
-                className="w-full max-h-[760px] object-cover object-top"
+                src={equipeAdvogadosAsset.url} 
+                alt="Advogados Monteiro Ramalho" 
+                className="w-full h-auto"
                 loading="lazy"
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Equipe de Funcionários Section */}
+      <section className="py-24 bg-background text-foreground relative overflow-hidden border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >
+              Nossa Equipe
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-serif text-foreground leading-tight"
+            >
+              Pessoas que fazem a excelência <span className="text-primary italic">acontecer</span>.
+            </motion.h3>
+          </div>
+
+          <motion.figure
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto overflow-hidden rounded-lg border border-border"
+          >
+            <img
+              src={equipeOficialAsset.url}
+              alt="Equipe de funcionários do Monteiro Ramalho Advogados Associados"
+              className="w-full aspect-square object-cover object-top"
+              loading="lazy"
+            />
+          </motion.figure>
         </div>
       </section>
 
