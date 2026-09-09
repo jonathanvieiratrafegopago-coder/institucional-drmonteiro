@@ -575,7 +575,7 @@ function Index() {
           <img 
             src={quemSomosBgAsset.url} 
             alt="Escritório Monteiro Ramalho" 
-            className="w-full h-full object-cover opacity-30 grayscale"
+            className="w-full h-full object-cover opacity-10 md:opacity-30 grayscale"
           />
         </div>
 
