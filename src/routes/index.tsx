@@ -9,7 +9,9 @@ import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista-new-2.pn
 import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial-new.png.asset.json';
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 
 import clientesGrid1Asset from '@/assets/clientes-grid-new-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-new-2.png.asset.json';
@@ -40,10 +42,26 @@ export const Route = createFileRoute('/')({
 function Index() {
   const WHATSAPP_LINK = "https://wa.me/5585994443223?text=Olá! Gostaria de uma consultoria jurídica estratégica.";
 
+  // Navbar transparente sobre o hero; ganha fundo sólido apenas após rolar.
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
+      <nav
+        className={
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ' +
+          (scrolled
+            ? 'bg-background/90 backdrop-blur-md border-b border-primary/10'
+            : 'bg-transparent border-b border-transparent')
+        }
+      >
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
             <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
@@ -65,7 +83,7 @@ function Index() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-primary px-6 py-2.5 rounded-full text-primary-foreground font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-primary/20"
           >
-            <Phone className="w-4 h-4" /> WhatsApp
+            <WhatsAppIcon className="w-4 h-4" /> WhatsApp
           </a>
 
         </div>
@@ -78,7 +96,7 @@ function Index() {
           <img 
             src={heroOfficialAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-contain object-top p-4 md:p-8"
+            className="w-full h-full object-cover object-top"
           />
           {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
           <div className="absolute inset-0 bg-background/5" />
@@ -807,7 +825,7 @@ function Index() {
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-secondary text-secondary-foreground border border-primary/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all group"
       >
-        <Phone className="w-8 h-8 fill-current" />
+        <WhatsAppIcon className="w-8 h-8" />
         <span className="absolute right-full mr-4 bg-background/90 text-foreground text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border backdrop-blur-sm">
           Fale Conosco Agora
         </span>
