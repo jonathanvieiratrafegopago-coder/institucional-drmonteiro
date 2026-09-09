@@ -1,3 +1,4 @@
 # Roadmap
 - [ ] Adicionar seção de blog com os três artigos e suas imagens próprias
-- [ ] Usar a nova foto exclusivamente na seção Equipe
+- [ ] Manter a foto dos advogados na seção existente
+- [ ] Criar uma nova seção separada para a equipe de funcionários
