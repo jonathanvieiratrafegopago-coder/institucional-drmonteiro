@@ -183,7 +183,7 @@ function Index() {
                 title: 'Direito Empresarial', 
                 desc: 'Constituição societária, governança, acordos entre sócios e contratos estratégicos.', 
                 icon: Scale,
-                image: direitoEmpresarialAsset.url,
+                image: images.business,
                 bullets: ['Sociedades', 'Contratos', 'Governança', 'Startups'],
                 highlight: 'Muito além da burocracia, buscamos ser parceiros estratégicos do seu crescimento empresarial.'
               },
@@ -191,7 +191,7 @@ function Index() {
                 title: 'Direito Tributário', 
                 desc: 'Planejamento, recuperação de créditos e defesas administrativas focadas em ganho financeiro.', 
                 icon: Shield,
-                image: direitoTributarioAsset.url,
+                image: images.tax,
                 mainTitle: 'Eficiência tributária também gera resultados.',
                 bullets: ['Planejamento.', 'Recuperação de créditos.', 'Revisões fiscais.', 'Defesas administrativas.', 'Regularizações.'],
                 highlight: 'MUITO ALÉM DA CONFORMIDADE, BUSCAMOS IDENTIFICAR OPORTUNIDADES LEGÍTIMAS DE GANHO FINANCEIRO PARA NOSSOS CLIENTES.'
@@ -200,7 +200,7 @@ function Index() {
                 title: 'Direito Imobiliário', 
                 desc: 'Regularizações, due diligence e segurança jurídica em cada operação patrimonial.', 
                 icon: CheckCircle,
-                image: direitoImobiliarioAsset.url,
+                image: images.realEstate,
                 mainTitle: 'Segurança em cada decisão imobiliária.',
                 bullets: ['Regularizações.', 'Due diligence.', 'Contratos.', 'Negociações.', 'Defesa patrimonial.'],
                 highlight: 'MUITO ALÉM DA NEGOCIAÇÃO DE IMÓVEIS, ATUAMOS PARA PROTEGER PATRIMÔNIOS, REDUZIR RISCOS E OFERECER SEGURANÇA JURÍDICA EM CADA OPERAÇÃO.'
@@ -209,7 +209,7 @@ function Index() {
                 title: 'Direito Condominial', 
                 desc: 'Gestão jurídica segura para condomínios, implantação, convenções e mediação.', 
                 icon: Users,
-                image: direitoCondominialAsset.url,
+                image: images.condominium,
                 mainTitle: 'Gestão condominial exige respaldo jurídico.',
                 bullets: ['Implantação.', 'Assembleias.', 'Convenções.', 'Contratos.', 'Síndicos.', 'Prestação de contas.', 'Previsão Orçamentária.', 'Obras.', 'Mediação.'],
                 highlight: 'MAIS DO QUE SOLUCIONAR CONFLITOS, CONTRIBUÍMOS PARA UMA GESTÃO CONDOMINIAL SEGURA, TRANSPARENTE E JURIDICAMENTE ESTRUTURADA.'
@@ -218,7 +218,7 @@ function Index() {
                 title: 'Compliance Trabalhista', 
                 desc: 'Estruturação de processos internos para redução de riscos e prevenção de passivos.', 
                 icon: Gavel,
-                image: complianceTrabalhistaAsset.url,
+                image: images.laborCompliance,
                 mainTitle: 'A conformidade começa antes da fiscalização.',
                 bullets: ['NR-1.', 'PGR.', 'Rotinas.', 'Documentação.', 'Processos internos.', 'Treinamentos.', 'Prevenção de passivos.'],
                 highlight: 'MUITO ALÉM DA ADEQUAÇÃO ÀS NORMAS, ESTRUTURAMOS PROCESSOS QUE REDUZEM RISCOS, FORTALECEM A GESTÃO E PREVINEM PASSIVOS TRABALHISTAS.'
@@ -227,7 +227,7 @@ function Index() {
                 title: 'Planejamento Patrimonial', 
                 desc: 'Holding, sucessão e governança para preservar legados e proteger gerações.', 
                 icon: Award,
-                image: planejamentoPatrimonialAsset.url,
+                image: images.estatePlanning,
                 mainTitle: 'Patrimônio protegido. Futuro organizado.',
                 bullets: ['Holding.', 'Sucessão.', 'Governança.', 'Famílias empresárias.', 'Eficiência Tributária.'],
                 highlight: 'MAIS DO QUE ORGANIZAR BENS, ESTRUTURAMOS ESTRATÉGIAS PARA PROTEGER PATRIMÔNIOS, PRESERVAR LEGADOS E GARANTIR SEGURANÇA ÀS PRÓXIMAS GERAÇÕES.'
@@ -686,7 +686,7 @@ function Index() {
                 summary: 'Uma análise sobre planejamento sucessório, proteção patrimonial e os riscos jurídicos da ausência de formalização prévia.',
                 category: 'Planejamento patrimonial',
                 source: 'Economic News Brasil',
-                image: blogHerancaAsset.url,
+                image: images.blogInheritance,
                 imageAlt: 'Monteiro Neto em artigo sobre proteção patrimonial',
                 href: 'https://economicnewsbrasil.com.br/2026/03/18/heranca-anita-harley-patrimonio/'
               },
@@ -695,7 +695,7 @@ function Index() {
                 summary: 'Como processos jurídicos, monitoramento e tecnologia ajudam empresas a reduzir riscos na contratação de serviços terceirizados.',
                 category: 'Direito empresarial',
                 source: 'Migalhas',
-                image: blogGestaoTerceirosAsset.url,
+                image: images.blogThirdPartyManagement,
                 imageAlt: 'Ilustração do artigo sobre gestão jurídica de terceiros',
                 href: 'https://www.migalhas.com.br/depeso/340732/gestao-de-terceiros-como-estrategia-na-advocacia-corporativa'
               },
@@ -704,7 +704,7 @@ function Index() {
                 summary: 'Uma visão técnica sobre créditos previdenciários em condenações trabalhistas e oportunidades legítimas de recuperação para empresas.',
                 category: 'Direito tributário',
                 source: 'Migalhas',
-                image: blogCreditoPrevidenciarioAsset.url,
+                image: images.blogSocialSecurityCredit,
                 imageAlt: 'Ilustração do artigo sobre crédito previdenciário',
                 href: 'https://www.migalhas.com.br/depeso/346937/credito-previdenciario-decaido-como-fonte-de-recursos-para-as-empresas'
               }
