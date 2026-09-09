@@ -90,13 +90,13 @@ function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="inicio" className="relative block overflow-hidden bg-secondary pt-20 md:pt-0 md:min-h-screen md:flex md:items-center md:justify-center">
         {/* Imagem Hero Oficial */}
-        <div className="absolute inset-0 z-0">
+        <div className="relative w-full md:absolute md:inset-0 md:z-0">
           <img 
             src={heroOfficialAsset.url} 
             alt="Sócios Monteiro Ramalho" 
-            className="w-full h-full object-cover object-top"
+            className="w-full h-auto md:h-full object-contain md:object-cover object-top"
           />
           {/* Overlay sutil para garantir legibilidade de elementos flutuantes se houver */}
           <div className="absolute inset-0 bg-background/5" />
@@ -118,7 +118,7 @@ function Index() {
 
 
       {/* Nosso Impacto Section */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -134,7 +134,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-serif text-foreground leading-tight mb-16 !font-light"
+              className="text-3xl sm:text-4xl md:text-6xl font-serif text-foreground leading-tight mb-16 !font-light"
             >
               Uma trajetória construída com <br className="hidden md:block" />
               <span className="text-primary italic">consistência e resultados</span>.
@@ -145,7 +145,7 @@ function Index() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="grid grid-cols-2 md:grid-cols-5 gap-8 p-12 rounded-3xl border border-border bg-card/30 backdrop-blur-sm relative overflow-hidden group"
+              className="grid grid-cols-2 md:grid-cols-5 gap-8 p-6 sm:p-10 md:p-12 rounded-3xl border border-border bg-card/30 backdrop-blur-sm relative overflow-hidden group"
             >
               {/* Decorative accent */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
@@ -168,10 +168,10 @@ function Index() {
       </section>
 
       {/* Problemas Section */}
-      <section id="atuacao" className="py-24 bg-card relative">
+      <section id="atuacao" className="py-16 md:py-24 bg-card relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-serif text-card-foreground mb-6 leading-tight !font-light">Soluções jurídicas para diferentes desafios</h3>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-card-foreground mb-6 leading-tight !font-light">Soluções jurídicas para diferentes desafios</h3>
             <p className="text-muted-foreground">Combinamos visão jurídica, inteligência de negócios e planejamento para gerar previsibilidade e eficiência para empresas e legados.</p>
           </div>
 
@@ -302,14 +302,14 @@ function Index() {
       </section>
 
       {/* Diferencial Estratégico Section */}
-      <section className="py-24 bg-surface text-surface-foreground relative overflow-hidden border-y border-border">
+      <section className="py-16 md:py-24 bg-surface text-surface-foreground relative overflow-hidden border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h3 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-serif text-surface-foreground leading-tight mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif text-surface-foreground leading-tight mb-4"
             >
               Não entregamos apenas advocacia.
             </motion.h3>
@@ -364,7 +364,7 @@ function Index() {
 
 
       {/* Depoimentos Section */}
-      <section id="depoimentos" className="py-24 bg-surface text-surface-foreground border-y border-border">
+      <section id="depoimentos" className="py-16 md:py-24 bg-surface text-surface-foreground border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -440,7 +440,7 @@ function Index() {
       </section>
 
       {/* Clientes Section */}
-      <section className="py-24 bg-surface text-surface-foreground relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-surface text-surface-foreground relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -456,7 +456,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-serif text-surface-foreground leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif text-surface-foreground leading-tight"
             >
               A confiança é o nosso maior reconhecimento.
             </motion.h3>
@@ -494,7 +494,7 @@ function Index() {
       </section>
 
       {/* Equipe Section */}
-      <section className="py-24 bg-surface text-surface-foreground relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-surface text-surface-foreground relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -527,7 +527,7 @@ function Index() {
       </section>
 
       {/* Equipe de Funcionários Section */}
-      <section className="py-24 bg-background text-foreground relative overflow-hidden border-y border-border">
+      <section className="py-16 md:py-24 bg-background text-foreground relative overflow-hidden border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -543,7 +543,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-serif text-foreground leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground leading-tight"
             >
               Pessoas que fazem a excelência <span className="text-primary italic">acontecer</span>.
             </motion.h3>
@@ -568,19 +568,19 @@ function Index() {
 
 
       {/* Quem Somos Section */}
-      <section id="sobre" className="relative py-32 overflow-hidden">
+      <section id="sobre" className="relative py-20 md:py-32 overflow-hidden">
         {/* Background with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-background/90 z-10" />
           <img 
             src={quemSomosBgAsset.url} 
             alt="Escritório Monteiro Ramalho" 
-            className="w-full h-full object-cover opacity-30 grayscale"
+            className="w-full h-full object-cover opacity-10 md:opacity-30 grayscale"
           />
         </div>
 
         <div className="container mx-auto px-4 relative z-20">
-          <div className="grid md:grid-cols-12 gap-12 items-start">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
             <div className="md:col-span-5">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -595,7 +595,7 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-6xl font-serif text-foreground leading-tight"
+                className="text-3xl sm:text-4xl md:text-6xl font-serif text-foreground leading-tight"
               >
                 Hub jurídico estratégico para <span className="text-primary italic">empresas e legados</span>.
               </motion.h3>
@@ -655,7 +655,7 @@ function Index() {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-24 bg-surface text-surface-foreground border-y border-border">
+      <section id="blog" className="py-16 md:py-24 bg-surface text-surface-foreground border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -671,7 +671,7 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-serif text-surface-foreground leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif text-surface-foreground leading-tight"
             >
               Conhecimento jurídico para <span className="text-primary italic">decisões estratégicas</span>.
             </motion.h3>
@@ -749,10 +749,10 @@ function Index() {
 
 
       {/* CTA Final Section */}
-      <section className="py-24 bg-secondary border-y border-primary/20">
+      <section className="py-16 md:py-24 bg-secondary border-y border-primary/20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-4xl md:text-6xl font-serif text-secondary-foreground mb-8 leading-tight">Sua empresa merece um parceiro jurídico estratégico</h3>
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif text-secondary-foreground mb-8 leading-tight">Sua empresa merece um parceiro jurídico estratégico</h3>
             <p className="text-secondary-foreground/80 text-lg md:text-xl mb-12">
               Independendentemente do momento do seu negócio, contar com uma assessoria jurídica preparada para antecipar riscos e apoiar decisões faz toda a diferença.
             </p>
@@ -760,7 +760,7 @@ function Index() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-12 py-5 rounded-full text-xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
             >
               <Phone className="w-6 h-6" /> Vamos conversar?
             </a>
@@ -769,10 +769,10 @@ function Index() {
       </section>
 
       {/* Rodapé Section */}
-      <footer className="py-20 border-t border-primary/10 bg-background">
+      <footer className="py-14 md:py-20 border-t border-primary/10 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
-            <div className="col-span-2">
+          <div className="grid md:grid-cols-4 gap-10 md:gap-12 mb-16">
+            <div className="md:col-span-2">
               <div className="mb-6">
                 <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4 invert" />
               </div>
@@ -823,7 +823,7 @@ function Index() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-secondary text-secondary-foreground border border-primary/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all group"
+        className="fixed bottom-5 right-5 md:bottom-8 md:right-8 z-[60] w-14 h-14 md:w-16 md:h-16 bg-secondary text-secondary-foreground border border-primary/30 rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all group"
       >
         <WhatsAppIcon className="w-8 h-8" />
         <span className="absolute right-full mr-4 bg-background/90 text-foreground text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border backdrop-blur-sm">
