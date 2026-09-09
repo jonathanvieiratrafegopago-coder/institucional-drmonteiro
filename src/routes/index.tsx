@@ -242,13 +242,7 @@ function Index() {
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-20" />
-                  {item.image ? (
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
-                  ) : (
-                    <div className="w-full h-full bg-primary/5 flex items-center justify-center">
-                      <item.icon className="w-16 h-16 text-primary/20" />
-                    </div>
-                  )}
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
                   
                   {/* Badge */}
                   <div className="absolute top-6 left-6 z-30">
