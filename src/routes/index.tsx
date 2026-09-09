@@ -337,10 +337,10 @@ function Index() {
                   transition={{ delay: i * 0.1 }}
                   className="flex flex-col items-center text-center group"
                 >
-                  <div className="w-12 h-12 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm mb-6 shadow-lg group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-serif font-light text-xl md:text-2xl mb-8 shadow-lg group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all">
                     {item.step}
                   </div>
-                  <h5 className="text-[10px] font-bold text-surface-foreground uppercase tracking-wider leading-tight px-2 group-hover:text-primary transition-colors">
+                  <h5 className="text-sm md:text-base font-medium text-surface-foreground uppercase tracking-wider leading-snug px-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h5>
                 </motion.div>
