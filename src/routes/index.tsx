@@ -1,43 +1,28 @@
 import { createFileRoute } from '@tanstack/react-router';
-import heroOfficialUrl from '@/assets/hero-official-new.png';
-import quemSomosBgUrl from '@/assets/quem-somos-bg.png';
-import direitoEmpresarialUrl from '@/assets/direito-empresarial.png';
-import direitoTributarioUrl from '@/assets/direito-tributario-new.png';
-import direitoImobiliarioUrl from '@/assets/direito-imobiliario-new.png';
-import direitoCondominialUrl from '@/assets/direito-condominial-new.png';
-import complianceTrabalhistaUrl from '@/assets/compliance-trabalhista-new-2.png';
-import planejamentoPatrimonialUrl from '@/assets/planejamento-patrimonial-new.png';
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 
-import clientesGrid1Url from '@/assets/clientes-grid-new-1.png';
-import clientesGrid2Url from '@/assets/clientes-grid-new-2.png';
-import equipeAdvogadosUrl from '@/assets/equipe-new.png';
-import equipeOficialUrl from '@/assets/equipe-oficial.jpg';
-import blogHerancaUrl from '@/assets/blog-heranca.jpg';
-import blogGestaoTerceirosUrl from '@/assets/blog-gestao-terceiros.jpg';
-import blogCreditoPrevidenciarioUrl from '@/assets/blog-credito-previdenciario.jpg';
-import logoMraUrl from '@/assets/logo-mra-transparent.png';
-
-const heroOfficialAsset = { url: heroOfficialUrl };
-const quemSomosBgAsset = { url: quemSomosBgUrl };
-const direitoEmpresarialAsset = { url: direitoEmpresarialUrl };
-const direitoTributarioAsset = { url: direitoTributarioUrl };
-const direitoImobiliarioAsset = { url: direitoImobiliarioUrl };
-const direitoCondominialAsset = { url: direitoCondominialUrl };
-const complianceTrabalhistaAsset = { url: complianceTrabalhistaUrl };
-const planejamentoPatrimonialAsset = { url: planejamentoPatrimonialUrl };
-const clientesGrid1Asset = { url: clientesGrid1Url };
-const clientesGrid2Asset = { url: clientesGrid2Url };
-const equipeAdvogadosAsset = { url: equipeAdvogadosUrl };
-const equipeOficialAsset = { url: equipeOficialUrl };
-const blogHerancaAsset = { url: blogHerancaUrl };
-const blogGestaoTerceirosAsset = { url: blogGestaoTerceirosUrl };
-const blogCreditoPrevidenciarioAsset = { url: blogCreditoPrevidenciarioUrl };
-const logoMraAsset = { url: logoMraUrl };
+const images = {
+  hero: '/images/hero-official-new.jpg',
+  about: '/images/quem-somos-bg.jpg',
+  business: '/images/direito-empresarial.jpg',
+  tax: '/images/direito-tributario-new.jpg',
+  realEstate: '/images/direito-imobiliario-new.jpg',
+  condominium: '/images/direito-condominial-new.jpg',
+  laborCompliance: '/images/compliance-trabalhista-new-2.jpg',
+  estatePlanning: '/images/planejamento-patrimonial-new.jpg',
+  clientsOne: '/images/clientes-grid-new-1.jpg',
+  clientsTwo: '/images/clientes-grid-new-2.jpg',
+  lawyers: '/images/equipe-new.jpg',
+  staff: '/images/equipe-oficial.jpg',
+  blogInheritance: '/images/blog-heranca.jpg',
+  blogThirdPartyManagement: '/images/blog-gestao-terceiros.jpg',
+  blogSocialSecurityCredit: '/images/blog-credito-previdenciario.jpg',
+  logo: '/images/logo-mra-transparent.png',
+} as const;
 
 
 export const Route = createFileRoute('/')({
@@ -81,7 +66,7 @@ function Index() {
       >
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
-            <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
+            <img src={images.logo} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
           </div>
 
 
@@ -111,7 +96,7 @@ function Index() {
         {/* Imagem Hero Oficial */}
         <div className="relative w-full md:absolute md:inset-0 md:z-0">
           <img 
-            src={heroOfficialAsset.url} 
+            src={images.hero} 
             alt="Sócios Monteiro Ramalho" 
             className="w-full h-auto md:h-full object-contain md:object-cover object-top"
           />
@@ -488,7 +473,7 @@ function Index() {
               className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
-                src={clientesGrid1Asset.url} 
+                src={images.clientsOne} 
                 alt="Nossos Clientes - Grade 1" 
                 className="w-full h-auto"
               />
@@ -501,7 +486,7 @@ function Index() {
               className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
-                src={clientesGrid2Asset.url} 
+                src={images.clientsTwo} 
                 alt="Nossos Clientes - Grade 2" 
                 className="w-full h-auto"
               />
@@ -533,7 +518,7 @@ function Index() {
               className="rounded-3xl overflow-hidden"
             >
               <img 
-                src={equipeAdvogadosAsset.url} 
+                src={images.lawyers} 
                 alt="Advogados Monteiro Ramalho" 
                 className="w-full h-auto"
                 loading="lazy"
@@ -574,7 +559,7 @@ function Index() {
             className="max-w-4xl mx-auto overflow-hidden rounded-lg border border-border"
           >
             <img
-              src={equipeOficialAsset.url}
+              src={images.staff}
               alt="Equipe de funcionários do Monteiro Ramalho Advogados Associados"
               className="w-full aspect-square object-cover object-top"
               loading="lazy"
@@ -590,7 +575,7 @@ function Index() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-background/90 z-10" />
           <img 
-            src={quemSomosBgAsset.url} 
+            src={images.about} 
             alt="Escritório Monteiro Ramalho" 
             className="w-full h-full object-cover opacity-10 md:opacity-30 grayscale"
           />
@@ -791,7 +776,7 @@ function Index() {
           <div className="grid md:grid-cols-4 gap-10 md:gap-12 mb-16">
             <div className="md:col-span-2">
               <div className="mb-6">
-                <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4 invert" />
+                <img src={images.logo} alt="Monteiro Ramalho Advogados" className="h-12 w-auto mb-4 invert" />
               </div>
 
               <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
