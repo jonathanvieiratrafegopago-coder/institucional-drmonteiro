@@ -9,7 +9,9 @@ import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista-new-2.pn
 import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial-new.png.asset.json';
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 
 import clientesGrid1Asset from '@/assets/clientes-grid-new-1.png.asset.json';
 import clientesGrid2Asset from '@/assets/clientes-grid-new-2.png.asset.json';
