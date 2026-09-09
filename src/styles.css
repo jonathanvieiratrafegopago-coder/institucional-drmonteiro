@@ -100,7 +100,7 @@
 
 @theme {
   --font-serif: "Spectral", Georgia, serif;
-  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  --font-sans: "Spectral", Georgia, serif;
 }
 
 @layer base {
