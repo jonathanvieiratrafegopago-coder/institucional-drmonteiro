@@ -42,10 +42,26 @@ export const Route = createFileRoute('/')({
 function Index() {
   const WHATSAPP_LINK = "https://wa.me/5585994443223?text=Olá! Gostaria de uma consultoria jurídica estratégica.";
 
+  // Navbar transparente sobre o hero; ganha fundo sólido apenas após rolar.
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
+      <nav
+        className={
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ' +
+          (scrolled
+            ? 'bg-background/90 backdrop-blur-md border-b border-primary/10'
+            : 'bg-transparent border-b border-transparent')
+        }
+      >
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center">
             <img src={logoMraAsset.url} alt="Monteiro Ramalho Advogados" className="h-10 md:h-12 w-auto invert" />
