@@ -90,7 +90,7 @@ function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative flex items-center justify-center overflow-hidden bg-secondary pt-24 md:pt-0 md:min-h-screen">
+      <section id="inicio" className="relative block overflow-hidden bg-secondary pt-20 md:pt-0 md:min-h-screen md:flex md:items-center md:justify-center">
         {/* Imagem Hero Oficial */}
         <div className="relative w-full md:absolute md:inset-0 md:z-0">
           <img 
