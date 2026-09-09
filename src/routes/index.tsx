@@ -1,26 +1,43 @@
 import { createFileRoute } from '@tanstack/react-router';
-import heroOfficialAsset from '@/assets/hero-official-new.png.asset.json';
-import quemSomosBgAsset from '@/assets/quem-somos-bg.png.asset.json';
-import direitoEmpresarialAsset from '@/assets/direito-empresarial.png.asset.json';
-import direitoTributarioAsset from '@/assets/direito-tributario-new.png.asset.json';
-import direitoImobiliarioAsset from '@/assets/direito-imobiliario-new.png.asset.json';
-import direitoCondominialAsset from '@/assets/direito-condominial-new.png.asset.json';
-import complianceTrabalhistaAsset from '@/assets/compliance-trabalhista-new-2.png.asset.json';
-import planejamentoPatrimonialAsset from '@/assets/planejamento-patrimonial-new.png.asset.json';
+import heroOfficialUrl from '@/assets/hero-official-new.png';
+import quemSomosBgUrl from '@/assets/quem-somos-bg.png';
+import direitoEmpresarialUrl from '@/assets/direito-empresarial.png';
+import direitoTributarioUrl from '@/assets/direito-tributario-new.png';
+import direitoImobiliarioUrl from '@/assets/direito-imobiliario-new.png';
+import direitoCondominialUrl from '@/assets/direito-condominial-new.png';
+import complianceTrabalhistaUrl from '@/assets/compliance-trabalhista-new-2.png';
+import planejamentoPatrimonialUrl from '@/assets/planejamento-patrimonial-new.png';
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, Scale, Users, Gavel, Award, Shield, ArrowRight, Gavel as GavelIcon, Star } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 
-import clientesGrid1Asset from '@/assets/clientes-grid-new-1.png.asset.json';
-import clientesGrid2Asset from '@/assets/clientes-grid-new-2.png.asset.json';
-import equipeAdvogadosAsset from '@/assets/equipe-new.png.asset.json';
-import equipeOficialAsset from '@/assets/equipe-oficial.jpg.asset.json';
-import blogHerancaAsset from '@/assets/blog-heranca.jpg.asset.json';
-import blogGestaoTerceirosAsset from '@/assets/blog-gestao-terceiros.jpg.asset.json';
-import blogCreditoPrevidenciarioAsset from '@/assets/blog-credito-previdenciario.jpg.asset.json';
-import logoMraAsset from '@/assets/logo-mra-transparent.png.asset.json';
+import clientesGrid1Url from '@/assets/clientes-grid-new-1.png';
+import clientesGrid2Url from '@/assets/clientes-grid-new-2.png';
+import equipeAdvogadosUrl from '@/assets/equipe-new.png';
+import equipeOficialUrl from '@/assets/equipe-oficial.jpg';
+import blogHerancaUrl from '@/assets/blog-heranca.jpg';
+import blogGestaoTerceirosUrl from '@/assets/blog-gestao-terceiros.jpg';
+import blogCreditoPrevidenciarioUrl from '@/assets/blog-credito-previdenciario.jpg';
+import logoMraUrl from '@/assets/logo-mra-transparent.png';
+
+const heroOfficialAsset = { url: heroOfficialUrl };
+const quemSomosBgAsset = { url: quemSomosBgUrl };
+const direitoEmpresarialAsset = { url: direitoEmpresarialUrl };
+const direitoTributarioAsset = { url: direitoTributarioUrl };
+const direitoImobiliarioAsset = { url: direitoImobiliarioUrl };
+const direitoCondominialAsset = { url: direitoCondominialUrl };
+const complianceTrabalhistaAsset = { url: complianceTrabalhistaUrl };
+const planejamentoPatrimonialAsset = { url: planejamentoPatrimonialUrl };
+const clientesGrid1Asset = { url: clientesGrid1Url };
+const clientesGrid2Asset = { url: clientesGrid2Url };
+const equipeAdvogadosAsset = { url: equipeAdvogadosUrl };
+const equipeOficialAsset = { url: equipeOficialUrl };
+const blogHerancaAsset = { url: blogHerancaUrl };
+const blogGestaoTerceirosAsset = { url: blogGestaoTerceirosUrl };
+const blogCreditoPrevidenciarioAsset = { url: blogCreditoPrevidenciarioUrl };
+const logoMraAsset = { url: logoMraUrl };
 
 
 export const Route = createFileRoute('/')({
