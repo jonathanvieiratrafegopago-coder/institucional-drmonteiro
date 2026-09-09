@@ -48,7 +48,7 @@ export const Route = createFileRoute('/')({
       { property: "og:title", content: "Monteiro Ramalho Advogados Associados" },
       { property: "og:description", content: "Transformamos o jurídico em um ativo estratégico." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroOfficialAsset.url },
+      
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
